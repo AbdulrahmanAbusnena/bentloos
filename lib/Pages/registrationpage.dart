@@ -12,10 +12,10 @@ class _IntroPageState extends State<IntroPage> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        leading: const CircleAvatar(
-          backgroundImage: AssetImage('assets/google.png'),
-        ),
-      ),
+          //    leading: const CircleAvatar(
+          //  backgroundImage: AssetImage('assets/google.png'),
+          //   ),
+          ),
     );
   }
 }
