@@ -13,7 +13,7 @@ class _IntroPageState extends State<IntroPage> {
     return Scaffold(
       appBar: AppBar(
         leading: const CircleAvatar(
-          backgroundImage: AssetImage('assets/earth-americas.png'),
+          backgroundImage: AssetImage('assets/google.png'),
         ),
       ),
     );
