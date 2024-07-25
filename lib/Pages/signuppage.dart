@@ -1,9 +1,12 @@
 import 'package:bentlos/Components/TextField.dart';
 import 'package:bentlos/Components/buttons.dart';
+import 'package:bentlos/Components/snackbar.dart';
+import 'package:bentlos/Pages/homepage.dart';
 import 'package:bentlos/Pages/loginpage.dart';
 import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
+import 'package:bentlos/Services/authentication.dart';
 
 class SignUp extends StatefulWidget {
   const SignUp({super.key});
@@ -16,6 +19,38 @@ class _SignUpState extends State<SignUp> {
   final TextEditingController emailController = TextEditingController();
   final TextEditingController passwordController = TextEditingController();
   final TextEditingController nameController = TextEditingController();
+  bool isLoading = false;
+  @override
+  void dispose() {
+    emailController.dispose();
+    passwordController.dispose();
+    nameController.dispose();
+    super.dispose();
+  }
+
+  void signUpUser() async {
+    String res = await AuthServices().signUpUser(
+      email: emailController.text,
+      password: passwordController.text,
+      name: nameController.text,
+    );
+
+    if (res == "Success") {
+      setState(() {
+        isLoading = true;
+      });
+      Navigator.pushReplacement(
+          context,
+          MaterialPageRoute(
+            builder: (context) => const HomePage(),
+          ));
+    } else {
+      setState(() {
+        isLoading = false;
+      });
+      showSnackBar(context, res);
+    }
+  }
 
   @override
   Widget build(BuildContext context) {
@@ -65,14 +100,7 @@ class _SignUpState extends State<SignUp> {
             ),
             ElevatedButton(
               style: ButtonTheme1,
-              onPressed: () async {
-                // final email = _email.text;
-                //  final password = _password.text;
-                //   final userCredential = await FirebaseAuth.instance
-                //       .createUserWithEmailAndPassword(
-                //     email: email, password: password);
-                //  print(userCredential);
-              },
+              onPressed: signUpUser,
               child: Text(
                 'Sign up',
                 style: GoogleFonts.montserrat(
