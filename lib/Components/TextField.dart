@@ -1,21 +1,35 @@
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 
-class Textfields extends StatefulWidget {
-  const Textfields({super.key});
+class Textfields extends StatelessWidget {
+  final TextEditingController textEditingController;
+  final bool isPass;
+  final String hintText;
+  final IconData? icon;
+  final TextInputType textInputType;
 
-  @override
-  State<Textfields> createState() => _TextfieldsState();
-}
+  const Textfields({
+    super.key,
+    required this.textEditingController,
+    required this.hintText,
+    this.isPass = false,
+    required this.icon,
+    required this.textInputType,
+  });
 
-class _TextfieldsState extends State<Textfields> {
   @override
   Widget build(BuildContext context) {
     return Padding(
       padding: const EdgeInsets.symmetric(horizontal: 20, vertical: 10),
       child: TextField(
+        controller: textEditingController,
+        obscureText: isPass,
         decoration: InputDecoration(
-          hintText: 'Enter Email',
+          prefixIcon: Icon(
+            icon,
+            color: Colors.black,
+          ),
+          hintText: hintText,
           hintStyle: GoogleFonts.montserrat(
             color: Colors.grey,
             fontSize: 18,

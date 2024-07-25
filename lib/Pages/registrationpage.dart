@@ -1,5 +1,6 @@
 // import 'package:bentlos/Pages/homepage.dart';
-import 'package:bentlos/Pages/signInpage.dart';
+import 'package:bentlos/Pages/loginpage.dart';
+import 'package:bentlos/Pages/signuppage.dart';
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:bentlos/Components/buttons.dart';
@@ -59,7 +60,7 @@ class _IntroPageState extends State<IntroPage> {
             onPressed: () {
               Navigator.push(
                 context,
-                MaterialPageRoute(builder: (context) => const SignIn()),
+                MaterialPageRoute(builder: (context) => const SignUp()),
               );
             },
             child: Text("Sign in",
@@ -86,7 +87,7 @@ class _IntroPageState extends State<IntroPage> {
           TextButton(
             onPressed: () {
               Navigator.push(context,
-                  MaterialPageRoute(builder: (context) => const SignIn()));
+                  MaterialPageRoute(builder: (context) => const LoginPage()));
             },
             child: Text('Log in',
                 style: GoogleFonts.montserrat(
