@@ -1,5 +1,5 @@
 import 'package:bentlos/Components/buttons.dart';
-import 'package:bentlos/Pages/loginpage.dart';
+// import 'package:bentlos/Pages/loginpage.dart';
 import 'package:bentlos/Pages/registrationpage.dart';
 import 'package:bentlos/Services/authentication.dart';
 import 'package:flutter/material.dart';
