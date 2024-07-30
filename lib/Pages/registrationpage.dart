@@ -63,7 +63,7 @@ class _IntroPageState extends State<IntroPage> {
                 MaterialPageRoute(builder: (context) => const SignUp()),
               );
             },
-            child: Text("Sign in",
+            child: Text("Sign up",
                 style: GoogleFonts.montserrat(
                   color: Colors.black,
                   fontSize: 20,
@@ -96,8 +96,38 @@ class _IntroPageState extends State<IntroPage> {
                   fontWeight: FontWeight.w600,
                 )),
           ),
+          Padding(
+            padding: const EdgeInsets.symmetric(horizontal: 28),
+            child: Row(
+              children: [
+                const Expanded(
+                  child: Divider(
+                    thickness: 0.5,
+                    endIndent: 40,
+                    color: Colors.grey,
+                  ),
+                ),
+                Text('or continue with', style: GoogleFonts.montserrat()),
+                const Expanded(
+                  child: Divider(
+                    thickness: 0.5,
+                    indent: 40,
+                    //    endIndent: 50,
+                    color: Colors.grey,
+                  ),
+                ),
+              ],
+            ),
+          ),
           const SizedBox(
-            height: 300,
+            height: 40,
+            //   width: 50,
+          ),
+          const SizedBox(
+            height: 185,
+          ),
+          const SizedBox(
+            height: 40,
           )
         ],
       ),

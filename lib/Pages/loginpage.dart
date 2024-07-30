@@ -53,12 +53,12 @@ class _LoginPageState extends State<LoginPage> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: const Color.fromARGB(255, 253, 231, 197),
+      backgroundColor: const Color(0xffECE6CB),
       body: SingleChildScrollView(
         child: Column(
           children: [
             const SizedBox(
-              height: 285,
+              height: 210,
             ),
             Text('Log in',
                 style: GoogleFonts.inknutAntiqua(
@@ -114,6 +114,68 @@ class _LoginPageState extends State<LoginPage> {
             const SizedBox(
               height: 20,
             ),
+            Padding(
+              padding: const EdgeInsets.symmetric(horizontal: 28),
+              child: Row(
+                children: [
+                  const Expanded(
+                    child: Divider(
+                      thickness: 0.5,
+                      endIndent: 40,
+                      color: Colors.grey,
+                    ),
+                  ),
+                  Text('or continue with', style: GoogleFonts.montserrat()),
+                  const SizedBox(
+                    height: 100,
+                  ),
+                  const Expanded(
+                    child: Divider(
+                      thickness: 0.5,
+                      indent: 40,
+                      //    endIndent: 50,
+                      color: Colors.grey,
+                    ),
+                  ),
+                ],
+              ),
+            ),
+            SizedBox(
+              child: Container(
+                // color: Colors.white,
+                height: 77,
+                width: 400,
+                decoration: const BoxDecoration(
+                    color: Colors.white,
+                    borderRadius: BorderRadius.horizontal(
+                        left: Radius.circular(35.0),
+                        right: Radius.circular(35.0))),
+                child: Row(
+                  children: [
+                    Padding(
+                      padding: const EdgeInsets.all(8.0),
+                      child: Image.asset(
+                        'assets/google.png',
+                        // height: 70,
+                        width: 80,
+                      ),
+                    ),
+                    Text(
+                      'Login With Google',
+                      style: GoogleFonts.montserrat(
+                        color: Colors.black,
+                        fontSize: 24,
+                        fontWeight: FontWeight.w700,
+                      ),
+                    ),
+                  ],
+                ),
+              ),
+            ),
+            const SizedBox(
+              height: 20,
+            ),
+            const SizedBox(height: 60),
             Row(
               mainAxisAlignment: MainAxisAlignment.center,
               children: [

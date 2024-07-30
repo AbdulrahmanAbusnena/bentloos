@@ -19,6 +19,9 @@ class Main extends StatelessWidget {
     return MaterialApp(
         debugShowCheckedModeBanner: false,
         title: 'Bentlos',
+        theme: ThemeData(
+          useMaterial3: true,
+        ),
         home: StreamBuilder(
             stream: FirebaseAuth.instance.authStateChanges(),
             builder: (context, snapshot) {
