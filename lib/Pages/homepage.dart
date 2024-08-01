@@ -68,6 +68,10 @@ class _HomePageState extends State<HomePage> {
               child: TextField(
                 decoration: InputDecoration(
                   hintText: 'Enter your desired location or serivce',
+                  hintStyle: GoogleFonts.montserrat(
+                    fontSize: 15,
+                    fontWeight: FontWeight.w700,
+                  ),
                   prefixIcon: const Icon(Icons.search_rounded, size: 35),
                   filled: true,
                   contentPadding: const EdgeInsets.symmetric(
@@ -75,9 +79,13 @@ class _HomePageState extends State<HomePage> {
                     horizontal: 15,
                   ),
                   fillColor: Colors.white,
+                  hoverColor: Colors.black,
                   border: OutlineInputBorder(
                     borderRadius: BorderRadius.circular(20),
-                    borderSide: BorderSide.none,
+                    borderSide: BorderSide(
+                      strokeAlign: BorderSide.strokeAlignCenter,
+                      color: Colors.black,
+                    ),
                   ),
                 ),
               ),
@@ -90,7 +98,13 @@ class _HomePageState extends State<HomePage> {
             height: 220,
             width: 390,
             decoration: BoxDecoration(
-              color: Colors.white,
+              boxShadow: [
+                BoxShadow(
+                    color: const Color(0xff4b4b4b).withOpacity(0.11),
+                    blurRadius: 200,
+                    spreadRadius: 5.0),
+              ],
+              color: const Color(0xffEDEDED),
               borderRadius: BorderRadius.circular(25),
             ),
             child: Column(
