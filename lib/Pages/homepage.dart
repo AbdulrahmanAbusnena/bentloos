@@ -1,9 +1,17 @@
-import 'package:bentlos/Components/buttons.dart';
+// import 'package:bentlos/Components/buttons.dart';
 import 'package:bentlos/Components/icon.dart';
+import 'package:bentlos/Pages/ExtPage/car_rentals.dart';
+import 'package:bentlos/Pages/ExtPage/exclusive.dart';
+import 'package:bentlos/Pages/ExtPage/flights.dart';
 import 'package:bentlos/Pages/ExtPage/hotels.dart';
+import 'package:bentlos/Pages/ExtPage/mobile_serivces.dart';
+import 'package:bentlos/Pages/ExtPage/more.dart';
+import 'package:bentlos/Pages/ExtPage/resturants.dart';
+import 'package:bentlos/Pages/ExtPage/vacation_rentals.dart';
+import 'package:flutter/cupertino.dart';
 // import 'package:bentlos/Pages/loginpage.dart';
-import 'package:bentlos/Pages/registrationpage.dart';
-import 'package:bentlos/Services/authentication.dart';
+//import 'package:bentlos/Pages/registrationpage.dart';
+//import 'package:bentlos/Services/authentication.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/widgets.dart';
 import 'package:google_fonts/google_fonts.dart';
@@ -59,6 +67,7 @@ class _HomePageState extends State<HomePage> {
               ),
               child: TextField(
                 decoration: InputDecoration(
+                  hintText: 'Enter your desired location or serivce',
                   prefixIcon: const Icon(Icons.search_rounded, size: 35),
                   filled: true,
                   contentPadding: const EdgeInsets.symmetric(
@@ -78,7 +87,7 @@ class _HomePageState extends State<HomePage> {
             height: 20,
           ),
           Container(
-            height: 210,
+            height: 220,
             width: 390,
             decoration: BoxDecoration(
               color: Colors.white,
@@ -91,6 +100,8 @@ class _HomePageState extends State<HomePage> {
                     Padding(
                       padding: const EdgeInsets.all(8.0),
                       child: IconButts(
+                        height: 60.0,
+                        width: 60.0,
                         iconss: 'assets/hotel.png',
                         onTap: () => Navigator.push(
                             context,
@@ -98,6 +109,110 @@ class _HomePageState extends State<HomePage> {
                               builder: (context) => const Hotels(),
                             )),
                       ),
+                    ),
+                    const SizedBox(
+                      width: 20,
+                    ),
+                    Padding(
+                      padding: const EdgeInsets.all(8.0),
+                      child: IconButts(
+                        iconss: 'assets/restaurant.png',
+                        height: 60.0,
+                        width: 60.0,
+                        onTap: () => Navigator.push(
+                            context,
+                            MaterialPageRoute(
+                              builder: (context) => const Resturants(),
+                            )),
+                      ),
+                    ),
+                    const SizedBox(
+                      width: 20,
+                    ),
+                    Padding(
+                      padding: const EdgeInsets.all(8.0),
+                      child: IconButts(
+                        height: 60.0,
+                        width: 60.0,
+                        iconss: 'assets/rent.png',
+                        onTap: () => Navigator.push(
+                            context,
+                            MaterialPageRoute(
+                              builder: (context) => const VacationRentals(),
+                            )),
+                      ),
+                    ),
+                    const SizedBox(
+                      width: 20,
+                    ),
+                    Padding(
+                      padding: const EdgeInsets.all(8.0),
+                      child: IconButts(
+                        height: 60.0,
+                        width: 60.0,
+                        iconss: 'assets/car-rent.png',
+                        onTap: () => Navigator.push(
+                            context,
+                            MaterialPageRoute(
+                              builder: (context) => const CarRentals(),
+                            )),
+                      ),
+                    ),
+                  ],
+                ),
+                const SizedBox(
+                  height: 28.5,
+                ),
+                Row(
+                  children: [
+                    IconButts(
+                      iconss: 'assets/smartphone.png',
+                      height: 67.0,
+                      width: 68.0,
+                      onTap: () => Navigator.push(
+                          context,
+                          MaterialPageRoute(
+                            builder: (context) => const MobileSerivces(),
+                          )),
+                    ),
+                    const SizedBox(
+                      width: 30,
+                    ),
+                    IconButts(
+                      iconss: 'assets/exclusive.png',
+                      height: 67.0,
+                      width: 68.0,
+                      onTap: () => Navigator.push(
+                          context,
+                          MaterialPageRoute(
+                            builder: (context) => const Exclusive(),
+                          )),
+                    ),
+                    const SizedBox(
+                      width: 30,
+                    ),
+                    IconButts(
+                      iconss: 'assets/plane.png',
+                      height: 67.0,
+                      width: 68.0,
+                      onTap: () => Navigator.push(
+                          context,
+                          MaterialPageRoute(
+                            builder: (context) => const Flights(),
+                          )),
+                    ),
+                    const SizedBox(
+                      width: 30,
+                    ),
+                    IconButts(
+                      iconss: 'assets/plus.png',
+                      height: 67.0,
+                      width: 68.0,
+                      onTap: () => Navigator.push(
+                          context,
+                          MaterialPageRoute(
+                            builder: (context) => const More(),
+                          )),
                     ),
                   ],
                 ),

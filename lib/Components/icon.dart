@@ -3,8 +3,15 @@ import 'package:flutter/material.dart';
 // ignore: must_be_immutable
 class IconButts extends StatefulWidget {
   final String iconss;
+  final double height;
+  final double width;
   void Function()? onTap;
-  IconButts({super.key, required this.iconss, required this.onTap});
+  IconButts(
+      {super.key,
+      required this.iconss,
+      required this.onTap,
+      required this.height,
+      required this.width});
 
   @override
   State<IconButts> createState() => _IconButtsState();
@@ -17,8 +24,8 @@ class _IconButtsState extends State<IconButts> {
       onTap: widget.onTap,
       child: Image.asset(
         widget.iconss,
-        height: 41,
-        width: 41,
+        height: widget.height,
+        width: widget.width,
       ),
     );
   }
