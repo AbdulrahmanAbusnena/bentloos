@@ -104,7 +104,7 @@ class _HomePageState extends State<HomePage> {
               boxShadow: const [
                 BoxShadow(
                   color: Color(0xff4b4b4b),
-                  blurRadius: 20,
+                  blurRadius: 12,
                   spreadRadius: 0,
                 ),
               ],
