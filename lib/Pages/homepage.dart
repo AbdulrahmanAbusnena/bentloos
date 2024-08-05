@@ -8,12 +8,11 @@ import 'package:bentlos/Pages/ExtPage/mobile_serivces.dart';
 import 'package:bentlos/Pages/ExtPage/more.dart';
 import 'package:bentlos/Pages/ExtPage/resturants.dart';
 import 'package:bentlos/Pages/ExtPage/vacation_rentals.dart';
-import 'package:flutter/cupertino.dart';
+import 'package:bentlos/Pages/logoutpage.dart';
 // import 'package:bentlos/Pages/loginpage.dart';
 //import 'package:bentlos/Pages/registrationpage.dart';
 //import 'package:bentlos/Services/authentication.dart';
 import 'package:flutter/material.dart';
-import 'package:flutter/widgets.dart';
 import 'package:google_fonts/google_fonts.dart';
 
 class HomePage extends StatefulWidget {
@@ -39,9 +38,16 @@ class _HomePageState extends State<HomePage> {
         ),
         centerTitle: true,
         backgroundColor: const Color(0xffECE6CB),
-        leading: const CircleAvatar(
-          backgroundImage: AssetImage('assets/earth-americas.png'),
-          backgroundColor: Color(0xffECE6CB),
+        leading: GestureDetector(
+          onTap: () => Navigator.push(
+              context,
+              MaterialPageRoute(
+                builder: (context) => const SignOut(),
+              )),
+          child: const CircleAvatar(
+            backgroundImage: AssetImage('assets/earth-americas.png'),
+            backgroundColor: Color(0xffECE6CB),
+          ),
         ),
       ),
       body: Column(
@@ -57,12 +63,13 @@ class _HomePageState extends State<HomePage> {
                 //   bottom: 50,
               ),
               decoration: BoxDecoration(
-                //     color: Colors.white,
-                boxShadow: [
+                borderRadius: BorderRadius.circular(20),
+                boxShadow: const [
                   BoxShadow(
-                      color: const Color(0xff4b4b4b).withOpacity(0.11),
-                      blurRadius: 100,
-                      spreadRadius: 0.0),
+                    color: Color(0xff4b4b4b),
+                    blurRadius: 5,
+                    spreadRadius: 0.0,
+                  ),
                 ],
               ),
               child: TextField(
@@ -74,15 +81,11 @@ class _HomePageState extends State<HomePage> {
                   ),
                   prefixIcon: const Icon(Icons.search_rounded, size: 35),
                   filled: true,
-                  contentPadding: const EdgeInsets.symmetric(
-                    vertical: 5,
-                    horizontal: 15,
-                  ),
                   fillColor: Colors.white,
                   hoverColor: Colors.black,
                   border: OutlineInputBorder(
                     borderRadius: BorderRadius.circular(20),
-                    borderSide: BorderSide(
+                    borderSide: const BorderSide(
                       strokeAlign: BorderSide.strokeAlignCenter,
                       color: Colors.black,
                     ),
@@ -98,11 +101,12 @@ class _HomePageState extends State<HomePage> {
             height: 220,
             width: 390,
             decoration: BoxDecoration(
-              boxShadow: [
+              boxShadow: const [
                 BoxShadow(
-                    color: const Color(0xff4b4b4b).withOpacity(0.11),
-                    blurRadius: 200,
-                    spreadRadius: 5.0),
+                  color: Color(0xff4b4b4b),
+                  blurRadius: 20,
+                  spreadRadius: 0,
+                ),
               ],
               color: const Color(0xffEDEDED),
               borderRadius: BorderRadius.circular(25),
@@ -125,8 +129,17 @@ class _HomePageState extends State<HomePage> {
                       ),
                     ),
                     const SizedBox(
-                      width: 20,
+                      width: 10,
                     ),
+                    const SizedBox(
+                      height: 50,
+                      child: VerticalDivider(
+                        color: Colors.black,
+                        thickness: 3,
+                        width: 0.01,
+                      ),
+                    ),
+                    const SizedBox(width: 10),
                     Padding(
                       padding: const EdgeInsets.all(8.0),
                       child: IconButts(
@@ -140,8 +153,17 @@ class _HomePageState extends State<HomePage> {
                             )),
                       ),
                     ),
+                    const SizedBox(width: 10),
                     const SizedBox(
-                      width: 20,
+                      height: 50,
+                      child: VerticalDivider(
+                        color: Colors.black,
+                        thickness: 3,
+                        width: 0.01,
+                      ),
+                    ),
+                    const SizedBox(
+                      width: 10,
                     ),
                     Padding(
                       padding: const EdgeInsets.all(8.0),
@@ -157,7 +179,18 @@ class _HomePageState extends State<HomePage> {
                       ),
                     ),
                     const SizedBox(
-                      width: 20,
+                      width: 10,
+                    ),
+                    const SizedBox(
+                      height: 50,
+                      child: VerticalDivider(
+                        color: Colors.black,
+                        thickness: 3,
+                        width: 0.01,
+                      ),
+                    ),
+                    const SizedBox(
+                      width: 10,
                     ),
                     Padding(
                       padding: const EdgeInsets.all(8.0),
@@ -189,8 +222,17 @@ class _HomePageState extends State<HomePage> {
                             builder: (context) => const MobileSerivces(),
                           )),
                     ),
+                    const SizedBox(width: 15),
                     const SizedBox(
-                      width: 30,
+                      height: 50,
+                      child: VerticalDivider(
+                        color: Colors.black,
+                        thickness: 3,
+                        width: 0.01,
+                      ),
+                    ),
+                    const SizedBox(
+                      width: 15,
                     ),
                     IconButts(
                       iconss: 'assets/exclusive.png',
@@ -202,8 +244,17 @@ class _HomePageState extends State<HomePage> {
                             builder: (context) => const Exclusive(),
                           )),
                     ),
+                    const SizedBox(width: 15),
                     const SizedBox(
-                      width: 30,
+                      height: 50,
+                      child: VerticalDivider(
+                        color: Colors.black,
+                        thickness: 3,
+                        width: 0.01,
+                      ),
+                    ),
+                    const SizedBox(
+                      width: 15,
                     ),
                     IconButts(
                       iconss: 'assets/plane.png',
@@ -215,8 +266,17 @@ class _HomePageState extends State<HomePage> {
                             builder: (context) => const Flights(),
                           )),
                     ),
+                    const SizedBox(width: 15),
                     const SizedBox(
-                      width: 30,
+                      height: 50,
+                      child: VerticalDivider(
+                        color: Colors.black,
+                        thickness: 3,
+                        width: 0.01,
+                      ),
+                    ),
+                    const SizedBox(
+                      width: 15,
                     ),
                     IconButts(
                       iconss: 'assets/plus.png',
@@ -232,6 +292,22 @@ class _HomePageState extends State<HomePage> {
                 ),
               ],
             ),
+          ),
+          const SizedBox(
+            height: 40,
+          ),
+          Row(
+            children: [
+              const SizedBox(
+                width: 30,
+              ),
+              Text('Recommended Trips',
+                  style: GoogleFonts.montserrat(
+                    fontSize: 25.0,
+                    fontWeight: FontWeight.w700,
+                    color: Colors.black,
+                  )),
+            ],
           ),
         ],
       ),

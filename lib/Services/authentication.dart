@@ -3,7 +3,7 @@ import 'package:firebase_auth/firebase_auth.dart';
 // mport 'package:firebase_core/firebase_core.dart';
 
 class AuthServices {
-  // for storing data in  firestore
+  // for storing data in  fir estore
   final FirebaseFirestore _firestore = FirebaseFirestore.instance;
   // for the authentication
   final FirebaseAuth _auth = FirebaseAuth.instance;

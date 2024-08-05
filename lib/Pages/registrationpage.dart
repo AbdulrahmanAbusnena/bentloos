@@ -16,13 +16,13 @@ class _IntroPageState extends State<IntroPage> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: const Color.fromARGB(255, 253, 231, 197),
+      backgroundColor: const Color(0xffECE6CB),
       appBar: AppBar(
-        backgroundColor: const Color.fromARGB(255, 253, 231, 197),
-        elevation: 0.0,
+        backgroundColor: const Color(0xffECE6CB),
+        // elevation: 0.0,
         leading: const CircleAvatar(
           backgroundImage: AssetImage('assets/earth-americas.png'),
-          backgroundColor: Color.fromARGB(255, 253, 231, 197),
+          backgroundColor: Color(0xffECE6CB),
         ),
       ),
       body: Column(
@@ -127,7 +127,7 @@ class _IntroPageState extends State<IntroPage> {
             height: 185,
           ),
           const SizedBox(
-            height: 40,
+            height: 35,
           )
         ],
       ),
