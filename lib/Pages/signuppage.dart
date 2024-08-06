@@ -29,6 +29,11 @@ class _SignUpState extends State<SignUp> {
   }
 
   void signUpUser() async {
+    showDialog(
+        context: context,
+        builder: (context) {
+          return const Center(child: CircularProgressIndicator());
+        });
     String res = await AuthServices().signUpUser(
       email: emailController.text,
       password: passwordController.text,

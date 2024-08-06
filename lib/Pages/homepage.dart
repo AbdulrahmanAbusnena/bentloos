@@ -1,4 +1,5 @@
 // import 'package:bentlos/Components/buttons.dart';
+import 'package:bentlos/Components/card.dart';
 import 'package:bentlos/Components/icon.dart';
 import 'package:bentlos/Pages/ExtPage/car_rentals.dart';
 import 'package:bentlos/Pages/ExtPage/exclusive.dart';
@@ -307,7 +308,20 @@ class _HomePageState extends State<HomePage> {
                     fontWeight: FontWeight.w700,
                     color: Colors.black,
                   )),
+              const SizedBox(
+                width: 30,
+              ),
             ],
+          ),
+          SizedBox(
+            height: 250,
+            child: ListView.builder(
+              itemCount: 3,
+              scrollDirection: Axis.horizontal,
+              itemBuilder: (context, index) {
+                return const ReCards(image: 'assets/paris.jpeg');
+              },
+            ),
           ),
         ],
       ),

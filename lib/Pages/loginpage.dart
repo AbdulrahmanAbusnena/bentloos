@@ -27,6 +27,11 @@ class _LoginPageState extends State<LoginPage> {
   }
 
   void loginUsers() async {
+    showDialog(
+        context: context,
+        builder: (context) {
+          return const Center(child: CircularProgressIndicator());
+        });
     String res = await AuthServices().loginUser(
       email: emailController.text,
       password: passwordController.text,
