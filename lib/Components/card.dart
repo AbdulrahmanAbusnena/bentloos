@@ -3,11 +3,8 @@ import 'package:google_fonts/google_fonts.dart';
 
 class ReCards extends StatefulWidget {
   final String image;
-  //  final String locationName;
-  const ReCards(
-      {super.key,
-      //  required this.locationName,
-      required this.image});
+  final String locationName;
+  const ReCards({super.key, required this.locationName, required this.image});
 
   @override
   State<ReCards> createState() => _ReCardsState();
@@ -21,17 +18,41 @@ class _ReCardsState extends State<ReCards> {
       width: 200,
       decoration: BoxDecoration(
         borderRadius: BorderRadius.circular(54.0),
+        // Round corners for the card
       ),
-      child: Card(
-          child: ClipRRect(
-        borderRadius: BorderRadius.circular(20),
-        child: Image.asset(
-          widget.image,
-          height: 210,
-          width: 190,
-          fit: BoxFit.cover,
-        ),
-      )),
+      child: Stack(
+        // Use Stack to overlay elements
+        children: [
+          ClipRRect(
+            // Rounded image clip
+            borderRadius: BorderRadius.circular(20),
+            child: Image.asset(
+              widget.image,
+              height: 250, // Match image height to card height
+              width: 190, // Match image width to card width
+              fit: BoxFit.cover,
+            ),
+          ),
+          Positioned(
+            // Position text on top of the image
+            bottom: 10.0, // Adjust vertical position from bottom
+            left: 10.0, // Adjust horizontal position from left
+            child: Container(
+              // Container for text styling
+
+              padding: const EdgeInsets.all(8.0),
+              child: Text(
+                widget.locationName,
+                style: GoogleFonts.montserrat(
+                  fontSize: 20,
+                  fontWeight: FontWeight.w800,
+                  color: Colors.white, // Text color for visibility
+                ),
+              ),
+            ),
+          ),
+        ],
+      ),
     );
   }
 }

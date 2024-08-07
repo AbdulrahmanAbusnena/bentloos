@@ -319,7 +319,10 @@ class _HomePageState extends State<HomePage> {
               itemCount: 3,
               scrollDirection: Axis.horizontal,
               itemBuilder: (context, index) {
-                return const ReCards(image: 'assets/paris.jpeg');
+                return const ReCards(
+                  image: 'assets/paris.jpeg',
+                  locationName: 'Paris, France',
+                );
               },
             ),
           ),
