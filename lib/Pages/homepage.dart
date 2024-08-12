@@ -273,7 +273,46 @@ class _HomePageState extends State<HomePage> {
             Row(
               children: [
                 const SizedBox(
+                  width: 30.0,
+                ),
+                Text('Top Adventures and Tours',
+                    style: GoogleFonts.montserrat(
+                      fontSize: 25.0,
+                      fontWeight: FontWeight.w700,
+                      color: Colors.black,
+                    )),
+                const SizedBox(
+                  height: 5,
+                ),
+                const SizedBox(
                   width: 30,
+                ),
+              ],
+            ),
+            SizedBox(
+              height: 250,
+              child: ListView.builder(
+                itemCount: 3,
+                scrollDirection: Axis.horizontal,
+                itemBuilder: (context, index) {
+                  return const Row(
+                    children: [
+                      SizedBox(
+                        width: 10,
+                      ),
+                      ReCards(
+                        image: 'assets/topexperiences.jpeg',
+                        locationName: 'Top Experiences',
+                      ),
+                    ],
+                  );
+                },
+              ),
+            ),
+            Row(
+              children: [
+                const SizedBox(
+                  width: 30.0,
                 ),
                 Text('Recommended Trips',
                     style: GoogleFonts.montserrat(
