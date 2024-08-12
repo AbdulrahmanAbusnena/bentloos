@@ -24,6 +24,7 @@ class HomePage extends StatefulWidget {
 }
 
 class _HomePageState extends State<HomePage> {
+  final cards = [];
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -319,9 +320,16 @@ class _HomePageState extends State<HomePage> {
               itemCount: 3,
               scrollDirection: Axis.horizontal,
               itemBuilder: (context, index) {
-                return const ReCards(
-                  image: 'assets/paris.jpeg',
-                  locationName: 'Paris, France',
+                return const Row(
+                  children: [
+                    SizedBox(
+                      width: 10,
+                    ),
+                    ReCards(
+                      image: 'assets/paris.jpeg',
+                      locationName: 'Paris, France',
+                    ),
+                  ],
                 );
               },
             ),
