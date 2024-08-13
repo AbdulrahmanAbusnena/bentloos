@@ -1,20 +1,20 @@
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 
-class ReCards extends StatefulWidget {
+class Cards extends StatefulWidget {
   final String image;
-  final String locationName;
-  const ReCards({super.key, required this.locationName, required this.image});
+  final String locationName; 
+  const Cards({super.key, required this.locationName, required this.image});
 
   @override
-  State<ReCards> createState() => _ReCardsState();
+  State<Cards> createState() => _CardsState();
 }
 
-class _ReCardsState extends State<ReCards> {
+class _CardsState extends State<Cards> {
   @override
   Widget build(BuildContext context) {
     return Container(
-      height: 250,
+      height: 250, 
       width: 200,
       decoration: BoxDecoration(
         borderRadius: BorderRadius.circular(54.0),

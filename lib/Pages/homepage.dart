@@ -1,6 +1,7 @@
 // import 'package:bentlos/Components/buttons.dart';
 import 'package:bentlos/Components/card.dart';
 import 'package:bentlos/Components/icon.dart';
+import 'package:bentlos/Components/search_homepage.dart';
 import 'package:bentlos/Pages/ExtPage/car_rentals.dart';
 import 'package:bentlos/Pages/ExtPage/exclusive.dart';
 import 'package:bentlos/Pages/ExtPage/flights.dart';
@@ -24,6 +25,7 @@ class HomePage extends StatefulWidget {
 }
 
 class _HomePageState extends State<HomePage> {
+  final cards = [];
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -51,282 +53,303 @@ class _HomePageState extends State<HomePage> {
           ),
         ),
       ),
-      body: Column(
-        children: [
-          Padding(
-            //padding: const EdgeInsets.symmetric(horizontal: 25, vertical: 15),
-            padding: const EdgeInsets.all(25),
-            child: Container(
-              margin: const EdgeInsets.only(
-                //   right: 40,
-                //    left: 40,
-                top: 15,
-                //   bottom: 50,
-              ),
+      body: SingleChildScrollView(
+        child: Column(
+          children: [
+            const SearchHomepage(),
+            const SizedBox(
+              height: 20,
+            ),
+            Container(
+              height: 220,
+              width: 390,
               decoration: BoxDecoration(
-                borderRadius: BorderRadius.circular(20),
                 boxShadow: const [
                   BoxShadow(
                     color: Color(0xff4b4b4b),
-                    blurRadius: 5,
-                    spreadRadius: 0.0,
+                    blurRadius: 12,
+                    spreadRadius: 0,
+                  ),
+                ],
+                color: const Color(0xffEDEDED),
+                borderRadius: BorderRadius.circular(
+                  25.0,
+                ),
+              ),
+              child: Column(
+                children: [
+                  const SizedBox(
+                    height: 10,
+                  ),
+                  Row(
+                    children: [
+                      const SizedBox(
+                        width: 10,
+                      ),
+                      Padding(
+                        padding: const EdgeInsets.all(8.0),
+                        child: IconButts(
+                          height: 60.0,
+                          width: 60.0,
+                          iconss: 'assets/hotel.png',
+                          onTap: () => Navigator.push(
+                              context,
+                              MaterialPageRoute(
+                                builder: (context) => const Hotels(),
+                              )),
+                        ),
+                      ),
+                      const SizedBox(
+                        width: 10,
+                      ),
+                      const SizedBox(
+                        height: 50,
+                        child: VerticalDivider(
+                          color: Colors.black,
+                          thickness: 3,
+                          width: 0.01,
+                        ),
+                      ),
+                      const SizedBox(width: 10),
+                      Padding(
+                        padding: const EdgeInsets.all(8.0),
+                        child: IconButts(
+                          iconss: 'assets/restaurant.png',
+                          height: 60.0,
+                          width: 60.0,
+                          onTap: () => Navigator.push(
+                              context,
+                              MaterialPageRoute(
+                                builder: (context) => const Resturants(),
+                              )),
+                        ),
+                      ),
+                      const SizedBox(width: 10),
+                      const SizedBox(
+                        height: 50,
+                        child: VerticalDivider(
+                          color: Colors.black,
+                          thickness: 3,
+                          width: 0.01,
+                        ),
+                      ),
+                      const SizedBox(
+                        width: 10,
+                      ),
+                      Padding(
+                        padding: const EdgeInsets.all(8.0),
+                        child: IconButts(
+                          height: 60.0,
+                          width: 60.0,
+                          iconss: 'assets/rent.png',
+                          onTap: () => Navigator.push(
+                              context,
+                              MaterialPageRoute(
+                                builder: (context) => const VacationRentals(),
+                              )),
+                        ),
+                      ),
+                      const SizedBox(
+                        width: 10,
+                      ),
+                      const SizedBox(
+                        height: 50,
+                        child: VerticalDivider(
+                          color: Colors.black,
+                          thickness: 3,
+                          width: 0.01,
+                        ),
+                      ),
+                      const SizedBox(
+                        width: 10,
+                      ),
+                      Padding(
+                        padding: const EdgeInsets.all(8.0),
+                        child: IconButts(
+                          height: 60.0,
+                          width: 60.0,
+                          iconss: 'assets/car-rent.png',
+                          onTap: () => Navigator.push(
+                              context,
+                              MaterialPageRoute(
+                                builder: (context) => const CarRentals(),
+                              )),
+                        ),
+                      ),
+                    ],
+                  ),
+                  const SizedBox(
+                    height: 28.5,
+                  ),
+                  Row(
+                    children: [
+                      const SizedBox(
+                        width: 10,
+                      ),
+                      IconButts(
+                        iconss: 'assets/smartphone.png',
+                        height: 70.0,
+                        width: 68.0,
+                        onTap: () => Navigator.push(
+                            context,
+                            MaterialPageRoute(
+                              builder: (context) => const MobileSerivces(),
+                            )),
+                      ),
+                      const SizedBox(width: 15),
+                      const SizedBox(
+                        height: 50,
+                        child: VerticalDivider(
+                          color: Colors.black,
+                          thickness: 3,
+                          width: 0.01,
+                        ),
+                      ),
+                      const SizedBox(
+                        width: 15,
+                      ),
+                      IconButts(
+                        iconss: 'assets/exclusive.png',
+                        height: 67.0,
+                        width: 68.0,
+                        onTap: () => Navigator.push(
+                            context,
+                            MaterialPageRoute(
+                              builder: (context) => const Exclusive(),
+                            )),
+                      ),
+                      const SizedBox(width: 15),
+                      const SizedBox(
+                        height: 50,
+                        child: VerticalDivider(
+                          color: Colors.black,
+                          thickness: 3,
+                          width: 0.01,
+                        ),
+                      ),
+                      const SizedBox(
+                        width: 15,
+                      ),
+                      IconButts(
+                        iconss: 'assets/plane.png',
+                        height: 67.0,
+                        width: 68.0,
+                        onTap: () => Navigator.push(
+                            context,
+                            MaterialPageRoute(
+                              builder: (context) => const Flights(),
+                            )),
+                      ),
+                      const SizedBox(width: 15),
+                      const SizedBox(
+                        height: 50,
+                        child: VerticalDivider(
+                          color: Colors.black,
+                          thickness: 3,
+                          width: 0.01,
+                        ),
+                      ),
+                      const SizedBox(
+                        width: 15,
+                      ),
+                      IconButts(
+                        iconss: 'assets/plus.png',
+                        height: 67.0,
+                        width: 68.0,
+                        onTap: () => Navigator.push(
+                            context,
+                            MaterialPageRoute(
+                              builder: (context) => const More(),
+                            )),
+                      ),
+                    ],
                   ),
                 ],
               ),
-              child: TextField(
-                decoration: InputDecoration(
-                  hintText: 'Enter your desired location or serivce',
-                  hintStyle: GoogleFonts.montserrat(
-                    fontSize: 15,
-                    fontWeight: FontWeight.w700,
-                  ),
-                  prefixIcon: const Icon(Icons.search_rounded, size: 35),
-                  filled: true,
-                  fillColor: Colors.white,
-                  hoverColor: Colors.black,
-                  border: OutlineInputBorder(
-                    borderRadius: BorderRadius.circular(20),
-                    borderSide: const BorderSide(
-                      strokeAlign: BorderSide.strokeAlignCenter,
-                      color: Colors.black,
-                    ),
-                  ),
-                ),
-              ),
             ),
-          ),
-          const SizedBox(
-            height: 20,
-          ),
-          Container(
-            height: 220,
-            width: 390,
-            decoration: BoxDecoration(
-              boxShadow: const [
-                BoxShadow(
-                  color: Color(0xff4b4b4b),
-                  blurRadius: 12,
-                  spreadRadius: 0,
-                ),
-              ],
-              color: const Color(0xffEDEDED),
-              borderRadius: BorderRadius.circular(25),
+            const SizedBox(
+              height: 40,
             ),
-            child: Column(
+            Row(
               children: [
-                Row(
-                  children: [
-                    Padding(
-                      padding: const EdgeInsets.all(8.0),
-                      child: IconButts(
-                        height: 60.0,
-                        width: 60.0,
-                        iconss: 'assets/hotel.png',
-                        onTap: () => Navigator.push(
-                            context,
-                            MaterialPageRoute(
-                              builder: (context) => const Hotels(),
-                            )),
-                      ),
-                    ),
-                    const SizedBox(
-                      width: 10,
-                    ),
-                    const SizedBox(
-                      height: 50,
-                      child: VerticalDivider(
-                        color: Colors.black,
-                        thickness: 3,
-                        width: 0.01,
-                      ),
-                    ),
-                    const SizedBox(width: 10),
-                    Padding(
-                      padding: const EdgeInsets.all(8.0),
-                      child: IconButts(
-                        iconss: 'assets/restaurant.png',
-                        height: 60.0,
-                        width: 60.0,
-                        onTap: () => Navigator.push(
-                            context,
-                            MaterialPageRoute(
-                              builder: (context) => const Resturants(),
-                            )),
-                      ),
-                    ),
-                    const SizedBox(width: 10),
-                    const SizedBox(
-                      height: 50,
-                      child: VerticalDivider(
-                        color: Colors.black,
-                        thickness: 3,
-                        width: 0.01,
-                      ),
-                    ),
-                    const SizedBox(
-                      width: 10,
-                    ),
-                    Padding(
-                      padding: const EdgeInsets.all(8.0),
-                      child: IconButts(
-                        height: 60.0,
-                        width: 60.0,
-                        iconss: 'assets/rent.png',
-                        onTap: () => Navigator.push(
-                            context,
-                            MaterialPageRoute(
-                              builder: (context) => const VacationRentals(),
-                            )),
-                      ),
-                    ),
-                    const SizedBox(
-                      width: 10,
-                    ),
-                    const SizedBox(
-                      height: 50,
-                      child: VerticalDivider(
-                        color: Colors.black,
-                        thickness: 3,
-                        width: 0.01,
-                      ),
-                    ),
-                    const SizedBox(
-                      width: 10,
-                    ),
-                    Padding(
-                      padding: const EdgeInsets.all(8.0),
-                      child: IconButts(
-                        height: 60.0,
-                        width: 60.0,
-                        iconss: 'assets/car-rent.png',
-                        onTap: () => Navigator.push(
-                            context,
-                            MaterialPageRoute(
-                              builder: (context) => const CarRentals(),
-                            )),
-                      ),
-                    ),
-                  ],
+                const SizedBox(
+                  width: 30.0,
+                ),
+                Text('Top Adventures and Tours',
+                    style: GoogleFonts.montserrat(
+                      fontSize: 25.0,
+                      fontWeight: FontWeight.w700,
+                      color: Colors.black,
+                    )),
+                const SizedBox(
+                  height: 5,
                 ),
                 const SizedBox(
-                  height: 28.5,
-                ),
-                Row(
-                  children: [
-                    IconButts(
-                      iconss: 'assets/smartphone.png',
-                      height: 67.0,
-                      width: 68.0,
-                      onTap: () => Navigator.push(
-                          context,
-                          MaterialPageRoute(
-                            builder: (context) => const MobileSerivces(),
-                          )),
-                    ),
-                    const SizedBox(width: 15),
-                    const SizedBox(
-                      height: 50,
-                      child: VerticalDivider(
-                        color: Colors.black,
-                        thickness: 3,
-                        width: 0.01,
-                      ),
-                    ),
-                    const SizedBox(
-                      width: 15,
-                    ),
-                    IconButts(
-                      iconss: 'assets/exclusive.png',
-                      height: 67.0,
-                      width: 68.0,
-                      onTap: () => Navigator.push(
-                          context,
-                          MaterialPageRoute(
-                            builder: (context) => const Exclusive(),
-                          )),
-                    ),
-                    const SizedBox(width: 15),
-                    const SizedBox(
-                      height: 50,
-                      child: VerticalDivider(
-                        color: Colors.black,
-                        thickness: 3,
-                        width: 0.01,
-                      ),
-                    ),
-                    const SizedBox(
-                      width: 15,
-                    ),
-                    IconButts(
-                      iconss: 'assets/plane.png',
-                      height: 67.0,
-                      width: 68.0,
-                      onTap: () => Navigator.push(
-                          context,
-                          MaterialPageRoute(
-                            builder: (context) => const Flights(),
-                          )),
-                    ),
-                    const SizedBox(width: 15),
-                    const SizedBox(
-                      height: 50,
-                      child: VerticalDivider(
-                        color: Colors.black,
-                        thickness: 3,
-                        width: 0.01,
-                      ),
-                    ),
-                    const SizedBox(
-                      width: 15,
-                    ),
-                    IconButts(
-                      iconss: 'assets/plus.png',
-                      height: 67.0,
-                      width: 68.0,
-                      onTap: () => Navigator.push(
-                          context,
-                          MaterialPageRoute(
-                            builder: (context) => const More(),
-                          )),
-                    ),
-                  ],
+                  width: 30,
                 ),
               ],
             ),
-          ),
-          const SizedBox(
-            height: 40,
-          ),
-          Row(
-            children: [
-              const SizedBox(
-                width: 30,
+            SizedBox(
+              height: 250,
+              child: ListView.builder(
+                itemCount: 3,
+                scrollDirection: Axis.horizontal,
+                itemBuilder: (context, index) {
+                  return const Row(
+                    children: [
+                      SizedBox(
+                        width: 10,
+                      ),
+                      ReCards(
+                        image: 'assets/topexperiences.jpeg',
+                        locationName: 'Top Experiences',
+                      ),
+                    ],
+                  );
+                },
               ),
-              Text('Recommended Trips',
-                  style: GoogleFonts.montserrat(
-                    fontSize: 25.0,
-                    fontWeight: FontWeight.w700,
-                    color: Colors.black,
-                  )),
-              const SizedBox(
-                width: 30,
-              ),
-            ],
-          ),
-          SizedBox(
-            height: 250,
-            child: ListView.builder(
-              itemCount: 3,
-              scrollDirection: Axis.horizontal,
-              itemBuilder: (context, index) {
-                return const ReCards(
-                  image: 'assets/paris.jpeg',
-                  locationName: 'Paris, France',
-                );
-              },
             ),
-          ),
-        ],
+            Row(
+              children: [
+                const SizedBox(
+                  width: 30.0,
+                ),
+                Text('Recommended Trips',
+                    style: GoogleFonts.montserrat(
+                      fontSize: 25.0,
+                      fontWeight: FontWeight.w700,
+                      color: Colors.black,
+                    )),
+                const SizedBox(
+                  height: 5,
+                ),
+                const SizedBox(
+                  width: 30,
+                ),
+              ],
+            ),
+            SizedBox(
+              height: 250,
+              child: ListView.builder(
+                itemCount: 3,
+                scrollDirection: Axis.horizontal,
+                itemBuilder: (context, index) {
+                  return const Row(
+                    children: [
+                      SizedBox(
+                        width: 10,
+                      ),
+                      ReCards(
+                        image: 'assets/paris.jpeg',
+                        locationName: 'Paris, France',
+                      ),
+                    ],
+                  );
+                },
+              ),
+            ),
+          ],
+        ),
       ),
     );
   }

@@ -44,6 +44,7 @@ dependencies:
   firebase_crashlytics: ^3.4.9
   firebase_dynamic_links: ^5.4.8
   google_sign_in: ^6.2.1
+  provider: ^6.1.2
 
 dev_dependencies:
   flutter_test:
