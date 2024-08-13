@@ -31,7 +31,7 @@ class _ReCardsState extends State<ReCards> {
               height: 250, // Match image height to card height
               width: 190, // Match image width to card width
               fit: BoxFit.cover,
-            ),
+            ), 
           ),
           Positioned(
             // Position text on top of the image
