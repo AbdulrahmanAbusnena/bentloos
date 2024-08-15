@@ -1,4 +1,3 @@
-// import 'package:bentlos/Components/buttons.dart';
 import 'package:bentlos/Components/card.dart';
 import 'package:bentlos/Components/icon.dart';
 import 'package:bentlos/Components/search_homepage.dart';
@@ -11,12 +10,14 @@ import 'package:bentlos/Pages/ExtPage/more.dart';
 import 'package:bentlos/Pages/ExtPage/resturants.dart';
 import 'package:bentlos/Pages/ExtPage/vacation_rentals.dart';
 import 'package:bentlos/Pages/logoutpage.dart';
-// import 'package:bentlos/Pages/loginpage.dart';
-//import 'package:bentlos/Pages/registrationpage.dart';
-//import 'package:bentlos/Services/authentication.dart';
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 
+/* 
+The HomePage() 
+the Main page in the App Bentlos  
+
+ */
 class HomePage extends StatefulWidget {
   const HomePage({super.key});
 
@@ -25,11 +26,17 @@ class HomePage extends StatefulWidget {
 }
 
 class _HomePageState extends State<HomePage> {
-  final cards = [];
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      // the background color of the app
       backgroundColor: const Color(0xffECE6CB),
+      // The AppBar() which is located in the top of the Application,
+      /* 
+     ** Inside of the AppBar 
+     - The Title - Which is centered 
+     - And the leading picture  
+     */
       appBar: AppBar(
         title: Text(
           'Bentlos',

@@ -1,4 +1,4 @@
-import 'package:bentlos/Components/TextField.dart';
+import 'package:bentlos/Components/textfield.dart';
 import 'package:bentlos/Components/buttons.dart';
 import 'package:bentlos/Components/snackbar.dart';
 import 'package:bentlos/Pages/homepage.dart';
@@ -45,6 +45,7 @@ class _SignUpState extends State<SignUp> {
         isLoading = true;
       });
       Navigator.pushReplacement(
+          // ignore: use_build_context_synchronously
           context,
           MaterialPageRoute(
             builder: (context) => const HomePage(),
@@ -53,6 +54,7 @@ class _SignUpState extends State<SignUp> {
       setState(() {
         isLoading = false;
       });
+      // ignore: use_build_context_synchronously
       showSnackBar(context, res);
     }
   }
@@ -61,7 +63,7 @@ class _SignUpState extends State<SignUp> {
   Widget build(BuildContext context) {
     //  double height = MediaQuery.of(context).size.height;
     return Scaffold(
-      backgroundColor: Color(0xffECE6CB),
+      backgroundColor: const Color(0xffECE6CB),
       // appBar: AppBar(),
       body: SingleChildScrollView(
         child: Column(
@@ -104,7 +106,7 @@ class _SignUpState extends State<SignUp> {
               height: 20,
             ),
             ElevatedButton(
-              style: ButtonTheme1,
+              style: buttonTheme1,
               onPressed: signUpUser,
               child: Text(
                 'Sign up',

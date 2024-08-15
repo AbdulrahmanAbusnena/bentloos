@@ -1,4 +1,4 @@
-import 'package:bentlos/Components/TextField.dart';
+import 'package:bentlos/Components/textfield.dart';
 import 'package:bentlos/Components/buttons.dart';
 import 'package:bentlos/Components/snackbar.dart';
 import 'package:bentlos/Pages/signuppage.dart';
@@ -42,6 +42,7 @@ class _LoginPageState extends State<LoginPage> {
         isLoading = true;
       });
       Navigator.pushReplacement(
+          // ignore: use_build_context_synchronously
           context,
           MaterialPageRoute(
             builder: (context) => const HomePage(),
@@ -108,7 +109,7 @@ class _LoginPageState extends State<LoginPage> {
               height: 20,
             ),
             ElevatedButton(
-              style: ButtonTheme1,
+              style: buttonTheme1,
               onPressed: loginUsers,
               child: Text('Log in',
                   style: GoogleFonts.montserrat(
