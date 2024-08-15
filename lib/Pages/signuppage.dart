@@ -61,7 +61,7 @@ class _SignUpState extends State<SignUp> {
   Widget build(BuildContext context) {
     //  double height = MediaQuery.of(context).size.height;
     return Scaffold(
-      backgroundColor: Color(0xffECE6CB),
+      backgroundColor: const Color(0xffECE6CB),
       // appBar: AppBar(),
       body: SingleChildScrollView(
         child: Column(

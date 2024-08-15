@@ -56,7 +56,7 @@ class _IntroPageState extends State<IntroPage> {
           const SizedBox(height: 40),
           Image.asset('assets/travel.png', height: 200, width: 150),
           ElevatedButton(
-            style: ButtonTheme1,
+            style: buttonTheme1,
             onPressed: () {
               Navigator.push(
                 context,

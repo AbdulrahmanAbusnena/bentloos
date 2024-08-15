@@ -17,7 +17,7 @@ class _SignOutState extends State<SignOut> {
     return Scaffold(
       body: Center(
         child: ElevatedButton(
-          style: ButtonTheme1,
+          style: buttonTheme1,
           onPressed: () async {
             await AuthServices().signOut();
             Navigator.pushReplacement(

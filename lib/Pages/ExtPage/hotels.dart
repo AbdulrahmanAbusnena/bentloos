@@ -7,7 +7,7 @@ class Hotels extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text('oo'),
+        title: const Text('oo'),
       ),
     );
   }
