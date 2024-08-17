@@ -308,7 +308,7 @@ class _HomePageState extends State<HomePage> {
                         width: 10,
                       ),
                       ReCards(
-                        image: 'assets/topexperiences.jpeg',
+                        image: 'assets/tokyo.jpeg',
                         locationName: 'Top Experiences',
                       ),
                     ],
