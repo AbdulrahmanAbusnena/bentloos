@@ -1,8 +1,11 @@
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 
+// ignore: must_be_immutable
 class TextControl extends StatefulWidget {
+  // ignore: prefer_typing_uninitialized_variables
   final sectionName;
+  // ignore: prefer_typing_uninitialized_variables
   final name;
   void Function()? onTap;
 
