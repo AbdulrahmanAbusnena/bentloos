@@ -40,11 +40,11 @@ class _UserProfileState extends State<UserProfile> {
         actions: [
           TextButton(
             onPressed: () => Navigator.pop(context),
-            child: Text('Cancel'),
+            child: const Text('Cancel'),
           ),
           TextButton(
             onPressed: () => Navigator.of(context).pop(newvalue),
-            child: Text('Save'),
+            child: const Text('Save'),
           ),
         ],
       ),
