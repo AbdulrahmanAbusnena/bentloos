@@ -9,7 +9,7 @@ import 'package:bentlos/Pages/ExtPage/mobile_serivces.dart';
 import 'package:bentlos/Pages/ExtPage/more.dart';
 import 'package:bentlos/Pages/ExtPage/resturants.dart';
 import 'package:bentlos/Pages/ExtPage/vacation_rentals.dart';
-import 'package:bentlos/Pages/logoutpage.dart';
+import 'package:bentlos/Pages/profile.dart';
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 
@@ -52,7 +52,7 @@ class _HomePageState extends State<HomePage> {
           onTap: () => Navigator.push(
               context,
               MaterialPageRoute(
-                builder: (context) => const SignOut(),
+                builder: (context) => const UserProfile(),
               )),
           child: const CircleAvatar(
             backgroundImage: AssetImage('assets/earth-americas.png'),
@@ -308,7 +308,7 @@ class _HomePageState extends State<HomePage> {
                         width: 10,
                       ),
                       ReCards(
-                        image: 'assets/topexperiences.jpeg',
+                        image: 'assets/tokyo.jpeg',
                         locationName: 'Top Experiences',
                       ),
                     ],
