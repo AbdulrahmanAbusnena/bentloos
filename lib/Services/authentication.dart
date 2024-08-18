@@ -1,3 +1,4 @@
+import 'package:bentlos/Pages/profile.dart';
 import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:firebase_auth/firebase_auth.dart';
 import 'package:bentlos/Models/usermodel.dart';
@@ -20,8 +21,13 @@ class AuthServices {
         UserCredential credential = await _auth.createUserWithEmailAndPassword(
             email: email, password: password);
         await _firestore.collection("users").doc(credential.user!.uid).set(
-              UserModel(uid: credential.user!.uid, name: name, email: email)
-                  .toMap(),
+              UserModel(
+                uid: credential.user!.uid,
+                name: name,
+                email: email,
+                password: password,
+                bio: 'Empty Bio',
+              ).toMap(),
             );
         await _firestore
             .collection("userProfiles")
