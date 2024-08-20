@@ -13,18 +13,15 @@ class _SearchHomepageState extends State<SearchHomepage> {
   Widget build(BuildContext context) {
     return Padding(
       //padding: const EdgeInsets.symmetric(horizontal: 25, vertical: 15),
-      padding: const EdgeInsets.all(25),
+      padding: const EdgeInsets.all(20),
       child: Container(
-        margin: const EdgeInsets.only(
-          top: 15,
-        ),
         decoration: BoxDecoration(
           borderRadius: BorderRadius.circular(40),
           boxShadow: const [
             BoxShadow(
               color: Color(0xff4b4b4b),
-              //   blurRadius: 10,
-              spreadRadius: 0.0,
+              //  blurRadius: 10,
+              //  spreadRadius: 0.0,
             ),
           ],
         ),
@@ -41,11 +38,14 @@ class _SearchHomepageState extends State<SearchHomepage> {
             hoverColor: Colors.black,
             border: InputBorder.none,
             contentPadding: const EdgeInsets.symmetric(
-              vertical: 15,
+              // vertical: 15,
               horizontal: 20,
             ),
             enabledBorder: OutlineInputBorder(
-              borderSide: BorderSide.none,
+              borderSide: const BorderSide(
+                color: Colors.black,
+                width: 2,
+              ),
               borderRadius: BorderRadius.circular(30),
             ),
             focusedBorder: OutlineInputBorder(

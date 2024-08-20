@@ -50,7 +50,7 @@ class _TextControlState extends State<TextControl> {
               GestureDetector(
                 onTap: widget.onTap,
                 child: Icon(
-                  Icons.settings,
+                  Icons.settings_outlined,
                   size: size.w(6),
                 ),
               ),
