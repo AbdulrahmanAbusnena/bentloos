@@ -80,65 +80,67 @@ class _UserProfileState extends State<UserProfile> {
         builder: (context, snapshot) {
           if (snapshot.hasData) {
             final userData = snapshot.data!.data() as Map<String, dynamic>;
-            return Column(
-              children: [
-                Center(
-                  child: ClipOval(
-                    child: SizedBox.fromSize(
-                      size: const Size.fromRadius(48),
-                      child:
-                          Image.asset('assets/tokyo.jpeg', fit: BoxFit.cover),
+            return SingleChildScrollView(
+              child: Column(
+                children: [
+                  Center(
+                    child: ClipOval(
+                      child: SizedBox.fromSize(
+                        size: const Size.fromRadius(48),
+                        child:
+                            Image.asset('assets/tokyo.jpeg', fit: BoxFit.cover),
+                      ),
                     ),
                   ),
-                ),
-                const SizedBox(
-                  height: 30,
-                ),
-                TextControl(
-                  name: userData['name'],
-                  sectionName: 'User Name',
-                  onTap: () => editField('name'),
-                ),
-                const SizedBox(
-                  height: 10,
-                ),
-                TextControl(
-                  name: userData['email'],
-                  sectionName: 'Email',
-                  onTap: () => editField('email'),
-                ),
-                const SizedBox(
-                  height: 10,
-                ),
-                TextControl(
-                  name: userData['bio'],
-                  sectionName: 'Bio',
-                  onTap: () => editField('bio'),
-                ),
-                const SizedBox(
-                  height: 200,
-                ),
-                Center(
-                  child: ElevatedButton(
-                    style: buttonTheme1,
-                    onPressed: () async {
-                      await AuthServices().signOut();
-                      Navigator.pushReplacement(
-                          // ignore: use_build_context_synchronously
-                          context,
-                          MaterialPageRoute(
-                            builder: (context) => const IntroPage(),
-                          ));
-                    },
-                    child: Text('Log out',
-                        style: GoogleFonts.montserrat(
-                          fontSize: 16,
-                          fontWeight: FontWeight.w600,
-                          color: Colors.black,
-                        )),
+                  const SizedBox(
+                    height: 30,
                   ),
-                ),
-              ],
+                  TextControl(
+                    name: userData['name'],
+                    sectionName: 'User Name',
+                    onTap: () => editField('name'),
+                  ),
+                  const SizedBox(
+                    height: 10,
+                  ),
+                  TextControl(
+                    name: userData['email'],
+                    sectionName: 'Email',
+                    onTap: () => editField('email'),
+                  ),
+                  const SizedBox(
+                    height: 10,
+                  ),
+                  TextControl(
+                    name: userData['bio'],
+                    sectionName: 'Bio',
+                    onTap: () => editField('bio'),
+                  ),
+                  const SizedBox(
+                    height: 200,
+                  ),
+                  Center(
+                    child: ElevatedButton(
+                      style: buttonTheme1,
+                      onPressed: () async {
+                        await AuthServices().signOut();
+                        Navigator.pushReplacement(
+                            // ignore: use_build_context_synchronously
+                            context,
+                            MaterialPageRoute(
+                              builder: (context) => const IntroPage(),
+                            ));
+                      },
+                      child: Text('Log out',
+                          style: GoogleFonts.montserrat(
+                            fontSize: 16,
+                            fontWeight: FontWeight.w600,
+                            color: Colors.black,
+                          )),
+                    ),
+                  ),
+                ],
+              ),
             );
           } else if (snapshot.hasError) {
             return Center(

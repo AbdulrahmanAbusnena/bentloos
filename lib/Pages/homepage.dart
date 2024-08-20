@@ -239,8 +239,8 @@ class _HomePageState extends State<HomePage> {
                       ),
                       IconButts(
                         iconss: 'assets/plane.png',
-                        height: 67.0,
-                        width: 68.0,
+                        height: 66.0,
+                        width: 66.0,
                         onTap: () => Navigator.push(
                             context,
                             MaterialPageRoute(
@@ -261,8 +261,8 @@ class _HomePageState extends State<HomePage> {
                       ),
                       IconButts(
                         iconss: 'assets/plus.png',
-                        height: 67.0,
-                        width: 68.0,
+                        height: 66.0,
+                        width: 66.0,
                         onTap: () => Navigator.push(
                             context,
                             MaterialPageRoute(
