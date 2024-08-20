@@ -24,6 +24,13 @@ class _SearchPageState extends State<SearchPage> {
           ),
         ),
         centerTitle: true,
+        leading: GestureDetector(
+          onTap: () => Navigator.pop(context),
+          child: Image.asset(
+            'assets/back.png',
+            width: 20,
+          ),
+        ),
       ),
     );
   }
