@@ -9,29 +9,35 @@ class Hotels extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    final currentSize = MediaQuery.of(context).size.width;
     return Scaffold(
       appBar: AppBar(
         title: const Text('oo'),
       ),
-      body: Center(
-        child: ElevatedButton(
-          style: buttonTheme1,
-          onPressed: () async {
-            await AuthServices().signOut();
-            Navigator.pushReplacement(
-                // ignore: use_build_context_synchronously
-                context,
-                MaterialPageRoute(
-                  builder: (context) => const IntroPage(),
-                ));
-          },
-          child: Text('Log out',
-              style: GoogleFonts.montserrat(
-                fontSize: 16,
-                fontWeight: FontWeight.w600,
-                color: Colors.black,
-              )),
-        ),
+      body: Column(
+        children: [
+          Text(currentSize.toString()),
+          Center(
+            child: ElevatedButton(
+              style: buttonTheme1,
+              onPressed: () async {
+                await AuthServices().signOut();
+                Navigator.pushReplacement(
+                    // ignore: use_build_context_synchronously
+                    context,
+                    MaterialPageRoute(
+                      builder: (context) => const IntroPage(),
+                    ));
+              },
+              child: Text('Log out',
+                  style: GoogleFonts.montserrat(
+                    fontSize: 16,
+                    fontWeight: FontWeight.w600,
+                    color: Colors.black,
+                  )),
+            ),
+          ),
+        ],
       ),
     );
   }
