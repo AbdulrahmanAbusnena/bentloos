@@ -17,7 +17,7 @@ import 'package:google_fonts/google_fonts.dart';
 /* 
 The HomePage() 
 the Main page in the App Bentlos  
-
+ 
  */
 class HomePage extends StatefulWidget {
   const HomePage({super.key});
@@ -31,7 +31,7 @@ class _HomePageState extends State<HomePage> {
   Widget build(BuildContext context) {
     return Scaffold(
       // the background color of the app
-      backgroundColor: const Color(0xffECE6CB),
+      backgroundColor: const Color.fromARGB(255, 245, 241, 224),
       // The AppBar() which is located in the top of the Application,
       /* 
      ** Inside of the AppBar 
@@ -48,7 +48,7 @@ class _HomePageState extends State<HomePage> {
           ),
         ),
         centerTitle: true,
-        backgroundColor: const Color(0xffECE6CB),
+        backgroundColor: const Color.fromARGB(255, 245, 241, 224),
         leading: GestureDetector(
           onTap: () => Navigator.push(
               context,
@@ -79,7 +79,7 @@ class _HomePageState extends State<HomePage> {
                     spreadRadius: 0,
                   ),
                 ],
-                color: const Color(0xffEDEDED),
+                color: const Color.fromARGB(255, 255, 255, 255),
                 borderRadius: BorderRadius.circular(
                   25.0,
                 ),
@@ -114,7 +114,7 @@ class _HomePageState extends State<HomePage> {
                         height: 50,
                         child: VerticalDivider(
                           color: Colors.black,
-                          thickness: 3,
+                          thickness: 1,
                           width: 0.01,
                         ),
                       ),
@@ -137,7 +137,7 @@ class _HomePageState extends State<HomePage> {
                         height: 50,
                         child: VerticalDivider(
                           color: Colors.black,
-                          thickness: 3,
+                          thickness: 1,
                           width: 0.01,
                         ),
                       ),
@@ -164,7 +164,7 @@ class _HomePageState extends State<HomePage> {
                         height: 50,
                         child: VerticalDivider(
                           color: Colors.black,
-                          thickness: 3,
+                          thickness: 1,
                           width: 0.01,
                         ),
                       ),
@@ -209,7 +209,7 @@ class _HomePageState extends State<HomePage> {
                         height: 50,
                         child: VerticalDivider(
                           color: Colors.black,
-                          thickness: 3,
+                          thickness: 1,
                           width: 0.01,
                         ),
                       ),
@@ -231,7 +231,7 @@ class _HomePageState extends State<HomePage> {
                         height: 50,
                         child: VerticalDivider(
                           color: Colors.black,
-                          thickness: 3,
+                          thickness: 1,
                           width: 0.01,
                         ),
                       ),
@@ -253,7 +253,7 @@ class _HomePageState extends State<HomePage> {
                         height: 50,
                         child: VerticalDivider(
                           color: Colors.black,
-                          thickness: 3,
+                          thickness: 1,
                           width: 0.01,
                         ),
                       ),

@@ -22,10 +22,13 @@ class _IconButtsState extends State<IconButts> {
   Widget build(BuildContext context) {
     return GestureDetector(
       onTap: widget.onTap,
-      child: Image.asset(
-        widget.iconss,
-        height: widget.height,
-        width: widget.width,
+      child: Opacity(
+        opacity: 0.9,
+        child: Image.asset(
+          widget.iconss,
+          height: widget.height,
+          width: widget.width,
+        ),
       ),
     );
   }
