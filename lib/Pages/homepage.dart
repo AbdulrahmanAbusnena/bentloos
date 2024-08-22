@@ -6,7 +6,7 @@ import 'package:bentlos/Pages/ExtPage/exclusive.dart';
 import 'package:bentlos/Pages/ExtPage/flights.dart';
 import 'package:bentlos/Pages/ExtPage/hotels.dart';
 import 'package:bentlos/Pages/ExtPage/mobile_serivces.dart';
-import 'package:bentlos/Pages/ExtPage/more.dart';
+import 'package:bentlos/Pages/ExtPage/more.dart'; 
 import 'package:bentlos/Pages/ExtPage/resturants.dart';
 import 'package:bentlos/Pages/ExtPage/vacation_rentals.dart';
 import 'package:bentlos/Pages/logoutpage.dart';
