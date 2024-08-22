@@ -11,7 +11,7 @@ import 'package:bentlos/Pages/ExtPage/resturants.dart';
 import 'package:bentlos/Pages/ExtPage/vacation_rentals.dart';
 import 'package:bentlos/Pages/logoutpage.dart';
 import 'package:flutter/material.dart';
-import 'package:google_fonts/google_fonts.dart';
+import 'package:google_fonts/google_fonts.dart';   
 
 /* 
 The HomePage() 
