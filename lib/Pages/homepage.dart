@@ -64,7 +64,9 @@ class _HomePageState extends State<HomePage> {
       body: SingleChildScrollView(
         child: Column(
           children: [
-            const SearchHomepage(),
+            SearchHomepage(
+              hintext: 'Enter your desired location or serivce',
+            ),
             const SizedBox(
               height: 20,
             ),

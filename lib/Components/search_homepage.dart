@@ -1,8 +1,10 @@
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 
+// ignore: must_be_immutable
 class SearchHomepage extends StatefulWidget {
-  const SearchHomepage({super.key});
+  String hintext;
+  SearchHomepage({super.key, required this.hintext});
 
   @override
   State<SearchHomepage> createState() => _SearchHomepageState();
@@ -27,7 +29,7 @@ class _SearchHomepageState extends State<SearchHomepage> {
         ),
         child: TextField(
           decoration: InputDecoration(
-            hintText: 'Enter your desired location or serivce',
+            hintText: widget.hintext,
             hintStyle: GoogleFonts.montserrat(
               fontSize: 15,
               fontWeight: FontWeight.w700,

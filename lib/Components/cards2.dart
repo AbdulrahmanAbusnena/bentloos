@@ -3,7 +3,7 @@ import 'package:google_fonts/google_fonts.dart';
 
 class Cards extends StatefulWidget {
   final String image;
-  final String locationName; 
+  final String locationName;
   const Cards({super.key, required this.locationName, required this.image});
 
   @override
@@ -14,7 +14,7 @@ class _CardsState extends State<Cards> {
   @override
   Widget build(BuildContext context) {
     return Container(
-      height: 250, 
+      height: 250,
       width: 200,
       decoration: BoxDecoration(
         borderRadius: BorderRadius.circular(54.0),
@@ -29,14 +29,15 @@ class _CardsState extends State<Cards> {
             child: Image.asset(
               widget.image,
               height: 250, // Match image height to card height
-              width: 190, // Match image width to card width
+              width: 200, // Match image width to card width
               fit: BoxFit.cover,
-            ), 
+            ),
           ),
           Positioned(
             // Position text on top of the image
             bottom: 10.0, // Adjust vertical position from bottom
             left: 10.0, // Adjust horizontal position from left
+            right: 4,
             child: Container(
               // Container for text styling
 
