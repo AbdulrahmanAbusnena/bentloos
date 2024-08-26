@@ -4,7 +4,6 @@ class UserModel {
   String password;
   String uid;
   String bio;
-
   UserModel({
     required this.name,
     required this.email,
