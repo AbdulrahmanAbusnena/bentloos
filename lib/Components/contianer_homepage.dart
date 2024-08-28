@@ -29,6 +29,14 @@ class _ContianerHomepageState extends State<ContianerHomepage> {
       height: widget.height,
       width: widget.width,
       decoration: BoxDecoration(
+        boxShadow: const [
+          BoxShadow(
+            color: Color(0xff4b4b4b),
+            blurRadius: 2,
+            offset: Offset(0, 2),
+            spreadRadius: 1,
+          ),
+        ],
         borderRadius: BorderRadius.circular(25),
         color: const Color.fromARGB(255, 255, 251, 251),
       ),

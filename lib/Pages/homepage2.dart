@@ -53,7 +53,7 @@ class _Homepage2State extends State<Homepage2> {
             ),
             Row(
               children: [
-                SizedBox(
+                const SizedBox(
                   width: 3,
                 ),
                 Text(
