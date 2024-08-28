@@ -34,7 +34,7 @@ class _ContianerHomepageState extends State<ContianerHomepage> {
             color: Color(0xff4b4b4b),
             blurRadius: 2,
             offset: Offset(0, 2),
-            spreadRadius: 1,
+            //  spreadRadius: 1,
           ),
         ],
         borderRadius: BorderRadius.circular(25),
