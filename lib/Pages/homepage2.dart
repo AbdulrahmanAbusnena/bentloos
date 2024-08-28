@@ -14,15 +14,18 @@ class _Homepage2State extends State<Homepage2> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: const Color.fromARGB(255, 245, 241, 224),
+      backgroundColor: const Color(0xffECE6CB),
       body: SafeArea(
         child: Column(
           children: [
             const SizedBox(
-              height: 30,
+              height: 18,
             ),
             Row(
               children: [
+                const SizedBox(
+                  width: 3,
+                ),
                 Text(
                   "Find your",
                   style: GoogleFonts.montserrat(
@@ -50,6 +53,9 @@ class _Homepage2State extends State<Homepage2> {
             ),
             Row(
               children: [
+                SizedBox(
+                  width: 3,
+                ),
                 Text(
                   "Next Destination",
                   style: GoogleFonts.montserrat(
@@ -60,13 +66,66 @@ class _Homepage2State extends State<Homepage2> {
                 ),
               ],
             ),
-            const Column(
+            const SizedBox(
+              height: 10,
+            ),
+            Column(
               children: [
-                Wrap(
+                Row(
                   children: [
-                    ContianerHomepage(),
+                    const SizedBox(
+                      width: 16,
+                    ),
+                    ContianerHomepage(
+                      height: 50,
+                      width: 160,
+                      imagepath: 'assets/bed.png',
+                      text: 'Stays',
+                      imageheight: 35,
+                      //   imagewidth: 20,
+                    ),
+                    const SizedBox(
+                      width: 10,
+                    ),
+                    ContianerHomepage(
+                      height: 45,
+                      width: 220,
+                      text: 'Restaurents',
+                      imagepath: 'assets/restaurent.png',
+                      imageheight: 35,
+                      //   imagewidth: 20,
+                    ),
                   ],
                 ),
+                const SizedBox(
+                  height: 30,
+                ),
+                Row(
+                  children: [
+                    const SizedBox(
+                      width: 15,
+                    ),
+                    ContianerHomepage(
+                      height: 45,
+                      width: 250,
+                      text: 'Top Attractions',
+                      imagepath: 'assets/topattractions.png',
+                      imageheight: 35,
+                      //   imagewidth: 20,
+                    ),
+                    const SizedBox(
+                      width: 10,
+                    ),
+                    ContianerHomepage(
+                      height: 50,
+                      width: 160,
+                      imagepath: 'assets/airplane.png',
+                      text: 'Stays',
+                      imageheight: 35,
+                      //   imagewidth: 20,
+                    ),
+                  ],
+                )
               ],
             ),
           ],
