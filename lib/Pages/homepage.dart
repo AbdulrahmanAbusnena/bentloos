@@ -86,11 +86,13 @@ class _HomePageState extends State<HomePage> {
                   25.0,
                 ),
               ),
+             // 
               child: Column(
                 children: [
                   const SizedBox(
                     height: 10,
-                  ),
+                  ), 
+                 // 
                   Row(
                     children: [
                       const SizedBox(
