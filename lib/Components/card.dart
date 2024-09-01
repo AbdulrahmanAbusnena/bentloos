@@ -31,12 +31,13 @@ class _ReCardsState extends State<ReCards> {
               height: 250, // Match image height to card height
               width: 190, // Match image width to card width
               fit: BoxFit.cover,
-            ), 
+            ),
           ),
           Positioned(
             // Position text on top of the image
             bottom: 10.0, // Adjust vertical position from bottom
             left: 10.0, // Adjust horizontal position from left
+            right: 4,
             child: Container(
               // Container for text styling
 
@@ -44,7 +45,7 @@ class _ReCardsState extends State<ReCards> {
               child: Text(
                 widget.locationName,
                 style: GoogleFonts.montserrat(
-                  fontSize: 20,
+                  fontSize: 18,
                   fontWeight: FontWeight.w800,
                   color: Colors.white, // Text color for visibility
                 ),

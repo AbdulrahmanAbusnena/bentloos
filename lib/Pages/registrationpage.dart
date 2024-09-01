@@ -128,7 +128,7 @@ class _IntroPageState extends State<IntroPage> {
           ),
           const SizedBox(
             height: 35,
-          )
+          ),
         ],
       ),
     );
