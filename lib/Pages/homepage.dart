@@ -36,7 +36,7 @@ class _HomePageState extends State<HomePage> {
       /* 
      ** Inside of the AppBar 
      - The Title - Which is centered 
-     - And the leading picture  
+     - And the leadin g picture  
      */
       appBar: AppBar(
         title: Text(
