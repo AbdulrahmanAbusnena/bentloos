@@ -1,4 +1,3 @@
-import 'package:bentlos/Pages/homepage.dart';
 import 'package:bentlos/Pages/homepage2.dart';
 import 'package:bentlos/Pages/registrationpage.dart';
 import 'package:bentlos/firebase_options.dart';

@@ -1,3 +1,4 @@
+import 'package:bentlos/Components/card3.dart';
 import 'package:bentlos/Components/contianer_homepage.dart';
 import 'package:bentlos/Pages/search_page.dart';
 import 'package:flutter/material.dart';
@@ -125,8 +126,91 @@ class _Homepage2State extends State<Homepage2> {
                       //   imagewidth: 20,
                     ),
                   ],
-                )
+                ),
               ],
+            ),
+            const SizedBox(
+              height: 13,
+            ),
+            const Divider(
+              color: Colors.black,
+            ),
+            const SizedBox(
+              height: 25,
+            ),
+            Row(
+              children: [
+                const SizedBox(
+                  width: 10,
+                ),
+                Text('Hotels Recommended By Bentlos',
+                    style: GoogleFonts.montserrat(
+                      color: Colors.black,
+                      fontSize: 20,
+                      fontWeight: FontWeight.w600,
+                    )),
+              ],
+            ),
+            const SizedBox(
+              height: 10,
+            ),
+            SizedBox(
+              height: 180,
+              child: ListView.builder(
+                scrollDirection: Axis.horizontal,
+                itemCount: 3,
+                itemBuilder: (context, index) {
+                  return Row(
+                    children: [
+                      const SizedBox(
+                        width: 8,
+                      ),
+                      Card3(
+                        height: 180,
+                        width: 180,
+                      ),
+                    ],
+                  );
+                },
+              ),
+            ),
+            const SizedBox(
+              height: 50,
+            ),
+            Row(
+              children: [
+                const SizedBox(
+                  width: 10,
+                ),
+                Text(
+                  'Top Destinaton for your next Trip',
+                  style: GoogleFonts.montserrat(
+                    color: Colors.black,
+                    fontSize: 20,
+                    fontWeight: FontWeight.w700,
+                  ),
+                ),
+              ],
+            ),
+            SizedBox(
+              height: 180,
+              child: ListView.builder(
+                scrollDirection: Axis.horizontal,
+                itemCount: 3,
+                itemBuilder: (context, index) {
+                  return Row(
+                    children: [
+                      const SizedBox(
+                        width: 8,
+                      ),
+                      Card3(
+                        height: 180,
+                        width: 180,
+                      ),
+                    ],
+                  );
+                },
+              ),
             ),
           ],
         ),
