@@ -1,4 +1,4 @@
-import 'package:bentlos/Pages/homepage2.dart';
+import 'package:bentlos/Pages/homepage.dart';
 import 'package:bentlos/Pages/registrationpage.dart';
 import 'package:bentlos/firebase_options.dart';
 import 'package:firebase_core/firebase_core.dart';
@@ -26,7 +26,7 @@ class Main extends StatelessWidget {
             stream: FirebaseAuth.instance.authStateChanges(),
             builder: (context, snapshot) {
               if (snapshot.hasData) {
-                return const Homepage2();
+                return const IntroPage();
               } else {
                 return const IntroPage();
               }

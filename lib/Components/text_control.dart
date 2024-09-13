@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
-import 'size.dart';
 
 // ignore: must_be_immutable
 class TextControl extends StatefulWidget {
@@ -23,10 +22,9 @@ class TextControl extends StatefulWidget {
 class _TextControlState extends State<TextControl> {
   @override
   Widget build(BuildContext context) {
-    var size = DynamicSize(context);
     return Container(
-      height: size.h(20),
-      width: size.w(90),
+      height: 200,
+      width: 200,
       decoration: BoxDecoration(
         color: const Color(0xffD9D9D9),
         borderRadius: BorderRadius.circular(20.0),
@@ -43,15 +41,15 @@ class _TextControlState extends State<TextControl> {
               ),
               Text(widget.sectionName,
                   style: GoogleFonts.montserrat(
-                      fontSize: size.w(4.5),
+                      fontSize: 20,
                       fontWeight: FontWeight.w500,
                       color: Colors.black)),
               const Spacer(),
               GestureDetector(
                 onTap: widget.onTap,
-                child: Icon(
+                child: const Icon(
                   Icons.settings_outlined,
-                  size: size.w(6),
+                  size: 30,
                 ),
               ),
               const SizedBox(
@@ -73,7 +71,7 @@ class _TextControlState extends State<TextControl> {
               ),
               Text(widget.name,
                   style: GoogleFonts.montserrat(
-                      fontSize: size.w(4),
+                      fontSize: 20,
                       fontWeight: FontWeight.w500,
                       color: Colors.black)),
             ],
