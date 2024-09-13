@@ -6,8 +6,6 @@ import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:bentlos/Services/authentication.dart';
 
-import 'homepage.dart';
-
 class LoginPage extends StatefulWidget {
   const LoginPage({super.key});
 
@@ -41,12 +39,12 @@ class _LoginPageState extends State<LoginPage> {
       setState(() {
         isLoading = true;
       });
-      Navigator.pushReplacement(
-          // ignore: use_build_context_synchronously
-          context,
-          MaterialPageRoute(
-            builder: (context) => const HomePage(),
-          ));
+      //   Navigator.pushReplacement(
+      //       // ignore: use_build_context_synchronously
+      //       context,
+      //      MaterialPageRoute(
+      //         builder: (context) => const HomePage(),
+      //        ));
     } else {
       setState(() {
         isLoading = false;

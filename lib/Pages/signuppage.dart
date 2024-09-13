@@ -1,7 +1,7 @@
 import 'package:bentlos/Components/TextField.dart';
 import 'package:bentlos/Components/buttons.dart';
 import 'package:bentlos/Components/snackbar.dart';
-import 'package:bentlos/Pages/homepage.dart';
+
 import 'package:bentlos/Pages/loginpage.dart';
 // import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/material.dart';
@@ -44,11 +44,11 @@ class _SignUpState extends State<SignUp> {
       setState(() {
         isLoading = true;
       });
-      Navigator.pushReplacement(
-          context,
-          MaterialPageRoute(
-            builder: (context) => const HomePage(),
-          ));
+      //  Navigator.pushReplacement(
+      //    context,
+      //    MaterialPageRoute(
+      //     builder: (context) => const HomePage(),
+      //     ));
     } else {
       setState(() {
         isLoading = false;
