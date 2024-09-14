@@ -1,3 +1,6 @@
+import 'package:bentlos/Components/buttons.dart';
+import 'package:bentlos/Pages/intro_pages/intro2.dart';
+import 'package:bentlos/Pages/intro_pages/intro3.dart';
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 
@@ -45,6 +48,42 @@ class IntroPage extends StatelessWidget {
               ],
             ),
             Image.asset('assets/graph1.png'),
+            Text(
+              '''Need a court or field for your next game? Whether you are an Individual player who wants to play with friends or a coach who needs a Pitch''',
+              style: GoogleFonts.montserrat(
+                color: Colors.black,
+                fontSize: 20,
+                fontWeight: FontWeight.normal,
+              ),
+            ),
+            const SizedBox(
+              height: 100,
+            ),
+            ElevatedButton(
+              style: buttonTheme1,
+              onPressed: () {
+                Navigator.push(
+                    context,
+                    MaterialPageRoute(
+                      builder: (context) => const Intro2(),
+                    ));
+              },
+              child: const Text('Next'),
+            ),
+            TextButton(
+              onPressed: () {
+                Navigator.push(
+                    context,
+                    MaterialPageRoute(
+                      builder: (context) => const Intro3(),
+                    ));
+              },
+              child: Text('Skip',
+                  style: GoogleFonts.montserrat(
+                    color: Colors.blue,
+                    fontWeight: FontWeight.normal,
+                  )),
+            ),
           ],
         ),
       ),

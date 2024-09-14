@@ -1,8 +1,5 @@
-import 'package:bentlos/Components/card3.dart';
-import 'package:bentlos/Components/contianer_homepage.dart';
 
 import 'package:flutter/material.dart';
-import 'package:google_fonts/google_fonts.dart';
 
 class Homepage extends StatefulWidget {
   const Homepage({super.key});

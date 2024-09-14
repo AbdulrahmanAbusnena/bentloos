@@ -1,6 +1,7 @@
 import 'package:bentlos/Components/TextField.dart';
 import 'package:bentlos/Components/buttons.dart';
 import 'package:bentlos/Components/snackbar.dart';
+import 'package:bentlos/Pages/homepage.dart';
 
 import 'package:bentlos/Pages/loginpage.dart';
 // import 'package:firebase_auth/firebase_auth.dart';
@@ -44,11 +45,11 @@ class _SignUpState extends State<SignUp> {
       setState(() {
         isLoading = true;
       });
-      //  Navigator.pushReplacement(
-      //    context,
-      //    MaterialPageRoute(
-      //     builder: (context) => const HomePage(),
-      //     ));
+      Navigator.pushReplacement(
+          context,
+          MaterialPageRoute(
+            builder: (context) => const Homepage(),
+          ));
     } else {
       setState(() {
         isLoading = false;
@@ -61,7 +62,7 @@ class _SignUpState extends State<SignUp> {
   Widget build(BuildContext context) {
     //  double height = MediaQuery.of(context).size.height;
     return Scaffold(
-      backgroundColor: const Color(0xffECE6CB),
+      backgroundColor: Colors.white,
       // appBar: AppBar(),
       body: SingleChildScrollView(
         child: Column(
@@ -111,7 +112,7 @@ class _SignUpState extends State<SignUp> {
                 style: GoogleFonts.montserrat(
                   fontSize: 22.0,
                   fontWeight: FontWeight.bold,
-                  color: Colors.black,
+                  color: Colors.white,
                 ),
               ),
             ),
