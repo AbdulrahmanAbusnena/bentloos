@@ -26,7 +26,7 @@ class Main extends StatelessWidget {
             stream: FirebaseAuth.instance.authStateChanges(),
             builder: (context, snapshot) {
               if (snapshot.hasData) {
-                return const IntroPage();
+                return const Homepage();
               } else {
                 return const IntroPage();
               }
