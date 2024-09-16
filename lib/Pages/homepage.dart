@@ -1,3 +1,5 @@
+import 'package:bentlos/Components/container_homepage.dart';
+import 'package:bentlos/Components/container_homepage2.dart';
 import 'package:bentlos/Components/drawer.dart';
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
@@ -30,13 +32,29 @@ class _HomepageState extends State<Homepage> {
                   },
                   icon: const Icon(Icons.menu)),
               const SizedBox(
-                width: 120,
+                width: 100,
               ),
               Text('Bentlos',
-                  style: GoogleFonts.mouseMemoirs(
+                  style: GoogleFonts.roboto(
                     color: Colors.black,
                     fontSize: 50,
+                    fontWeight: FontWeight.bold,
                   )),
+            ],
+          ),
+          const SizedBox(
+            height: 35,
+          ),
+          const Row(
+            children: [
+              SizedBox(
+                width: 5,
+              ),
+              ContainerHomepage(),
+              SizedBox(
+                width: 10,
+              ),
+              ContainerHomepag(),
             ],
           ),
         ],
