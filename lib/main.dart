@@ -1,3 +1,4 @@
+import 'package:bentlos/Components/navbar.dart';
 import 'package:bentlos/Pages/homepage.dart';
 import 'package:bentlos/Pages/registrationpage.dart';
 import 'package:bentlos/firebase_options.dart';
@@ -26,7 +27,7 @@ class Main extends StatelessWidget {
             stream: FirebaseAuth.instance.authStateChanges(),
             builder: (context, snapshot) {
               if (snapshot.hasData) {
-                return const IntroPage();
+                return const NavBar();
               } else {
                 return const IntroPage();
               }
