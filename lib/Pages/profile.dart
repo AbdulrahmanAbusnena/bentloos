@@ -7,14 +7,14 @@ import 'package:google_fonts/google_fonts.dart';
 import 'registrationpage.dart';
 import 'package:bentlos/Services/authentication.dart';
 
-class UserProfile extends StatefulWidget {
-  const UserProfile({super.key});
+class Profile extends StatefulWidget {
+  const Profile({super.key});
 
   @override
-  State<UserProfile> createState() => _UserProfileState();
+  State<Profile> createState() => _UserProfileState();
 }
 
-class _UserProfileState extends State<UserProfile> {
+class _UserProfileState extends State<Profile> {
   final userCollection = FirebaseFirestore.instance.collection("users");
   Future<void> editField(String field) async {
     String newvalue = '';
