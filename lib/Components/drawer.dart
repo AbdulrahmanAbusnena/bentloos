@@ -1,4 +1,6 @@
 import 'package:bentlos/Pages/homepage.dart';
+import 'package:bentlos/Pages/logoutpage.dart';
+import 'package:bentlos/Pages/walletpage.dart';
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 
@@ -57,7 +59,11 @@ class _DrawersState extends State<Drawers> {
                 )),
             onTap: () {
               // Handle settings page navigation
-              Navigator.pop(context);
+              Navigator.push(
+                  context,
+                  MaterialPageRoute(
+                    builder: (context) => const WalletPage(),
+                  ));
             },
           ),
           ListTile(
@@ -70,7 +76,11 @@ class _DrawersState extends State<Drawers> {
                 )),
             onTap: () {
               // Handle about page navigation
-              Navigator.pop(context);
+              Navigator.push(
+                  context,
+                  MaterialPageRoute(
+                    builder: (context) => const SignOut(),
+                  ));
             },
           ),
         ],
