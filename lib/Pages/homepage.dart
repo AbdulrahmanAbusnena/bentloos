@@ -15,9 +15,10 @@ class _HomepageState extends State<Homepage> {
   final GlobalKey<ScaffoldState> _scafoldKey = GlobalKey<ScaffoldState>();
   @override
   Widget build(BuildContext context) {
+    var screenSize = MediaQuery.of(context).size.width;
     return Scaffold(
       key: _scafoldKey,
-      backgroundColor: Colors.white,
+      backgroundColor: const Color(0xffE7EFEC),
       drawer: const Drawers(),
       body: Column(
         children: [
@@ -37,7 +38,7 @@ class _HomepageState extends State<Homepage> {
               Text('Bentlos',
                   style: GoogleFonts.roboto(
                     color: Colors.black,
-                    fontSize: 50,
+                    fontSize: 40,
                     fontWeight: FontWeight.bold,
                   )),
             ],

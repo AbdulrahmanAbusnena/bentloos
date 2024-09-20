@@ -1,3 +1,4 @@
+import 'package:bentlos/Pages/signuppage.dart';
 import 'package:flutter/material.dart';
 import 'package:bentlos/Components/buttons.dart';
 import 'package:google_fonts/google_fonts.dart';
@@ -24,14 +25,14 @@ class _SignOutState extends State<SignOut> {
                 // ignore: use_build_context_synchronously
                 context,
                 MaterialPageRoute(
-                  builder: (context) => const IntroPage(),
+                  builder: (context) => const SignUp(),
                 ));
           },
           child: Text('Log out',
               style: GoogleFonts.montserrat(
                 fontSize: 16,
                 fontWeight: FontWeight.w600,
-                color: Colors.black,
+                color: Colors.white,
               )),
         ),
       ),

@@ -23,10 +23,10 @@ class _TextControlState extends State<TextControl> {
   @override
   Widget build(BuildContext context) {
     return Container(
-      height: 200,
-      width: 200,
+      height: 150,
+      width: 410,
       decoration: BoxDecoration(
-        color: const Color(0xffD9D9D9),
+        color: const Color.fromARGB(255, 131, 131, 131),
         borderRadius: BorderRadius.circular(20.0),
       ),
       child: Column(
@@ -48,7 +48,7 @@ class _TextControlState extends State<TextControl> {
               GestureDetector(
                 onTap: widget.onTap,
                 child: const Icon(
-                  Icons.settings_outlined,
+                  Icons.edit_outlined,
                   size: 30,
                 ),
               ),

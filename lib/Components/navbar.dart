@@ -17,8 +17,8 @@ class _NavBarState extends State<NavBar> {
   final List<Widget> _widgetwhatever = <Widget>[
     const Homepage(),
     const SearchPage(),
-    const Settings(),
     const Profile(),
+    const Settings(),
   ];
 
   void _onItemTapped(int index) {
@@ -31,14 +31,14 @@ class _NavBarState extends State<NavBar> {
   Widget build(BuildContext context) {
     return Scaffold(
       bottomNavigationBar: NavigationBar(
-        backgroundColor: Colors.white,
+        backgroundColor: Color(0xffE7EFEC),
         indicatorColor: Colors.green[200],
         selectedIndex: _selectedIndex,
         destinations: const [
           NavigationDestination(icon: Icon(Icons.home), label: 'Home'),
           NavigationDestination(icon: Icon(Icons.search), label: 'Search'),
-          NavigationDestination(icon: Icon(Icons.settings), label: 'Settings'),
           NavigationDestination(icon: Icon(Icons.person), label: 'Profile'),
+          NavigationDestination(icon: Icon(Icons.settings), label: 'Settings'),
         ],
         onDestinationSelected: (index) => _onItemTapped(index),
       ),

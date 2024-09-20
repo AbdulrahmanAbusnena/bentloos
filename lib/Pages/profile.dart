@@ -59,7 +59,7 @@ class _UserProfileState extends State<Profile> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: const Color(0xffECE6CB),
+      backgroundColor: Colors.white,
       appBar: AppBar(
         title: Text(
           'profile',
@@ -69,7 +69,7 @@ class _UserProfileState extends State<Profile> {
             fontWeight: FontWeight.w500,
           ),
         ),
-        backgroundColor: const Color(0xffECE6CB),
+        backgroundColor: Colors.white,
         centerTitle: true,
       ),
       body: StreamBuilder<DocumentSnapshot>(
@@ -83,15 +83,6 @@ class _UserProfileState extends State<Profile> {
             return SingleChildScrollView(
               child: Column(
                 children: [
-                  Center(
-                    child: ClipOval(
-                      child: SizedBox.fromSize(
-                        size: const Size.fromRadius(48),
-                        child:
-                            Image.asset('assets/tokyo.jpeg', fit: BoxFit.cover),
-                      ),
-                    ),
-                  ),
                   const SizedBox(
                     height: 30,
                   ),
@@ -135,7 +126,7 @@ class _UserProfileState extends State<Profile> {
                           style: GoogleFonts.montserrat(
                             fontSize: 16,
                             fontWeight: FontWeight.w600,
-                            color: Colors.black,
+                            color: Colors.white,
                           )),
                     ),
                   ),
