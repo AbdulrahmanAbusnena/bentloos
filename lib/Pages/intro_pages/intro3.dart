@@ -1,6 +1,6 @@
 import 'package:bentlos/Components/buttons.dart';
-import 'package:bentlos/Pages/loginpage.dart';
-import 'package:bentlos/Pages/signuppage.dart';
+import 'package:bentlos/Pages/register/loginpage.dart';
+import 'package:bentlos/Pages/register/signuppage.dart';
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 

@@ -3,7 +3,7 @@ import 'package:bentlos/Components/buttons.dart';
 import 'package:bentlos/Components/snackbar.dart';
 import 'package:bentlos/Pages/homepage.dart';
 
-import 'package:bentlos/Pages/loginpage.dart';
+import 'package:bentlos/Pages/register/loginpage.dart';
 // import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';

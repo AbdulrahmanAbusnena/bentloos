@@ -1,9 +1,9 @@
-import 'package:bentlos/Pages/signuppage.dart';
+import 'package:bentlos/Pages/register/signuppage.dart';
 import 'package:flutter/material.dart';
 import 'package:bentlos/Components/buttons.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:bentlos/Services/authentication.dart';
-import 'registrationpage.dart';
+import '../intro_pages/registrationpage.dart';
 
 class SignOut extends StatefulWidget {
   const SignOut({super.key});

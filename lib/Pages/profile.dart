@@ -1,10 +1,11 @@
 import 'package:bentlos/Components/text_control.dart';
+import 'package:bentlos/Pages/register/loginpage.dart';
 import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:firebase_auth/firebase_auth.dart';
 import 'package:bentlos/Components/buttons.dart';
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
-import 'registrationpage.dart';
+import 'intro_pages/registrationpage.dart';
 import 'package:bentlos/Services/authentication.dart';
 
 class Profile extends StatefulWidget {
@@ -119,7 +120,7 @@ class _UserProfileState extends State<Profile> {
                             // ignore: use_build_context_synchronously
                             context,
                             MaterialPageRoute(
-                              builder: (context) => const IntroPage(),
+                              builder: (context) => const LoginPage(),
                             ));
                       },
                       child: Text('Log out',

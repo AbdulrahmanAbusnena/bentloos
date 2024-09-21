@@ -27,11 +27,16 @@ class _HomepageState extends State<Homepage> {
           ),
           Row(
             children: [
-              IconButton(
-                  onPressed: () {
-                    _scafoldKey.currentState?.openDrawer();
-                  },
-                  icon: const Icon(Icons.menu)),
+              GestureDetector(
+                child: Image.asset(
+                  'assets/menu.png',
+                  height: 20,
+                  width: 50,
+                ),
+                onTap: () {
+                  _scafoldKey.currentState?.openDrawer();
+                },
+              ),
               const SizedBox(
                 width: 100,
               ),

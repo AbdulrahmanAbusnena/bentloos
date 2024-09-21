@@ -1,5 +1,5 @@
 import 'package:bentlos/Pages/homepage.dart';
-import 'package:bentlos/Pages/logoutpage.dart';
+import 'package:bentlos/Pages/register/logoutpage.dart';
 import 'package:bentlos/Pages/walletpage.dart';
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';

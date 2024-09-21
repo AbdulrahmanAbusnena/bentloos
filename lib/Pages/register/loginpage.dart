@@ -1,12 +1,12 @@
 import 'package:bentlos/Components/textfield.dart';
 import 'package:bentlos/Components/buttons.dart';
 import 'package:bentlos/Components/snackbar.dart';
-import 'package:bentlos/Pages/signuppage.dart';
+import 'package:bentlos/Pages/register/signuppage.dart';
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:bentlos/Services/authentication.dart';
 
-import 'homepage.dart';
+import '../homepage.dart';
 
 class LoginPage extends StatefulWidget {
   const LoginPage({super.key});
