@@ -67,7 +67,7 @@ class _DrawersState extends State<Drawers> {
             },
           ),
           ListTile(
-            leading: Icon(Icons.logout, color: Colors.red),
+            leading: const Icon(Icons.logout, color: Colors.red),
             title: Text('Logout',
                 style: GoogleFonts.montserrat(
                   color: Colors.red,

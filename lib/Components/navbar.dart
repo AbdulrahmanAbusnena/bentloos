@@ -31,7 +31,7 @@ class _NavBarState extends State<NavBar> {
   Widget build(BuildContext context) {
     return Scaffold(
       bottomNavigationBar: NavigationBar(
-        backgroundColor: Color(0xffE7EFEC),
+        backgroundColor: const Color(0xffE7EFEC),
         indicatorColor: Colors.green[200],
         selectedIndex: _selectedIndex,
         destinations: const [

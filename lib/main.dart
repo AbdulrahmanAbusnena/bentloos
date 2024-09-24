@@ -1,5 +1,4 @@
 import 'package:bentlos/Components/navbar.dart';
-import 'package:bentlos/Pages/homepage.dart';
 import 'package:bentlos/Pages/intro_pages/registrationpage.dart';
 import 'package:bentlos/firebase_options.dart';
 import 'package:firebase_core/firebase_core.dart';

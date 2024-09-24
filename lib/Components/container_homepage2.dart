@@ -17,7 +17,7 @@ class _ContainerHomepagState extends State<ContainerHomepag> {
           height: 80.0,
           width: 200.0,
           decoration: BoxDecoration(
-            color: Color(0xffD4F3D2),
+            color: const Color(0xffD4F3D2),
             borderRadius: BorderRadius.circular(20),
           ),
           child: Row(
@@ -48,7 +48,7 @@ class _ContainerHomepagState extends State<ContainerHomepag> {
           height: 70.0,
           width: 200.0,
           decoration: BoxDecoration(
-            color: Color(0xffD4F3D2),
+            color: const Color(0xffD4F3D2),
             borderRadius: BorderRadius.circular(20),
           ),
           child: Row(
@@ -65,9 +65,6 @@ class _ContainerHomepagState extends State<ContainerHomepag> {
                     color: Colors.black,
                   ),
                 ),
-              ),
-              SizedBox(
-                width: 2,
               ),
               const Icon(
                 Icons.location_on_outlined,

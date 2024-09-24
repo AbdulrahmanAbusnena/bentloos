@@ -5,7 +5,6 @@ import 'package:firebase_auth/firebase_auth.dart';
 import 'package:bentlos/Components/buttons.dart';
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
-import 'intro_pages/registrationpage.dart';
 import 'package:bentlos/Services/authentication.dart';
 
 class Profile extends StatefulWidget {

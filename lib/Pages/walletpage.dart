@@ -15,7 +15,7 @@ class _WalletPageState extends State<WalletPage> {
         backgroundColor: Colors.white,
         body: Column(
           children: [
-            SizedBox(
+            const SizedBox(
               height: 60,
             ),
             Row(

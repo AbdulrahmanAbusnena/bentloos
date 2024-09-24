@@ -13,7 +13,7 @@ class _ContainerHomepageState extends State<ContainerHomepage> {
   Widget build(BuildContext context) {
     return LayoutBuilder(
         builder: (BuildContext context, BoxConstraints constraints) {
-      if (constraints.maxHeight < 600) {
+      if (constraints.maxWidth < 600) {
         return Container(
           height: 78,
           width: 210,
@@ -51,7 +51,7 @@ class _ContainerHomepageState extends State<ContainerHomepage> {
           ),
           child: Row(
             children: [
-              SizedBox(
+              const SizedBox(
                 width: 6,
               ),
               const Icon(
