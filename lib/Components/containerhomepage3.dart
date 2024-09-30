@@ -10,11 +10,12 @@ class Containerhomepage3 extends StatefulWidget {
 
 class _Containerhomepage3State extends State<Containerhomepage3> {
   final time = 1.25;
+
   @override
   Widget build(BuildContext context) {
     return LayoutBuilder(
       builder: (context, constraints) {
-        if (constraints.maxHeight < 600) {
+        if (constraints.maxWidth > 600) {
           return Container(
             height: 500,
             width: 500,
@@ -26,79 +27,112 @@ class _Containerhomepage3State extends State<Containerhomepage3> {
           );
         } else {
           return Container(
-              height: 200,
-              width: 400,
-              decoration: BoxDecoration(
-                borderRadius: BorderRadius.circular(20),
-                color: Colors.grey,
-              ),
-              child: Column(
+            height: 220,
+            width: 405,
+            decoration: BoxDecoration(
+              borderRadius: BorderRadius.circular(22),
+              color: Colors.grey,
+            ),
+            child: ClipRRect(
+              borderRadius: BorderRadius.circular(22),
+              child: Stack(
                 children: [
-                  const SizedBox(
-                    height: 100,
-                  ),
-                  Container(
-                    height: 100,
-                    width: 400,
-                    decoration: BoxDecoration(
-                      borderRadius: BorderRadius.circular(20),
-                      color: Colors.white,
+                  Positioned.fill(
+                    child: Image.asset(
+                      'assets/graph2.jpeg',
+                      fit: BoxFit.cover,
                     ),
-                    child: Row(
-                      children: [
-                        Row(
+                  ),
+                  Column(
+                    children: [
+                      const SizedBox(
+                        height: 120,
+                      ),
+                      Container(
+                        height: 100,
+                        width: 405,
+                        decoration: BoxDecoration(
+                          color: Colors.white,
+                          borderRadius: BorderRadius.circular(20),
+                        ),
+                        child: Column(
                           children: [
-                            const Icon(Icons.person_outlined),
                             const SizedBox(
-                              width: 10,
+                              height: 5,
                             ),
-                            Text(
-                              'Al-Ahli Stadium',
-                              style: GoogleFonts.montserrat(
-                                fontSize: 19,
-                                fontWeight: FontWeight.w400,
-                              ),
-                            ),
-                          ],
-                        ),
-                        const SizedBox(
-                          height: 35,
-                        ),
-                        const Icon(Icons.timer_outlined),
-                        Text(
-                          '$time',
-                          style: GoogleFonts.montserrat(
-                            fontSize: 19,
-                            fontWeight: FontWeight.w400,
-                          ),
-                        ),
-                        SizedBox(
-                          width: 10,
-                        ),
-                        Column(
-                          children: [
                             Row(
                               children: [
-                                const Icon(Icons.location_on_outlined),
-                                const SizedBox(
-                                  width: 8,
+                                Row(
+                                  children: [
+                                    const SizedBox(
+                                      width: 10,
+                                    ),
+                                    const Icon(
+                                      Icons.person_outlined,
+                                    ),
+                                    Text('AL-Ahli Stadium',
+                                        style: GoogleFonts.montserrat(
+                                          fontSize: 17,
+                                          fontWeight: FontWeight.w400,
+                                        )),
+                                  ],
                                 ),
-                                Text(
-                                  'Ben-Ashour, Libya',
-                                  style: GoogleFonts.montserrat(
-                                    fontSize: 18,
-                                    fontWeight: FontWeight.w400,
-                                  ),
+                                const SizedBox(
+                                  width: 25,
+                                ),
+                                const Icon(
+                                  Icons.location_on_outlined,
+                                ),
+                                Text('Ben-Ashour, Tripoli',
+                                    style: GoogleFonts.montserrat(
+                                      fontSize: 17,
+                                      fontWeight: FontWeight.w400,
+                                    )),
+                              ],
+                            ),
+                            const SizedBox(
+                              height: 35,
+                            ),
+                            Row(
+                              children: [
+                                Row(
+                                  mainAxisAlignment: MainAxisAlignment.start,
+                                  children: [
+                                    const SizedBox(
+                                      width: 10,
+                                    ),
+                                    const Icon(
+                                      Icons.timer_outlined,
+                                    ),
+                                    Text('$time : 8:45',
+                                        style: GoogleFonts.montserrat(
+                                          fontSize: 17,
+                                          fontWeight: FontWeight.w400,
+                                        )),
+                                    const SizedBox(
+                                      width: 90,
+                                    ),
+                                    const Icon(
+                                      Icons.attach_money_outlined,
+                                    ),
+                                    Text('49.0 per hour',
+                                        style: GoogleFonts.montserrat(
+                                          fontSize: 17,
+                                          fontWeight: FontWeight.w400,
+                                        )),
+                                  ],
                                 ),
                               ],
                             ),
                           ],
                         ),
-                      ],
-                    ),
+                      ),
+                    ],
                   ),
                 ],
-              ));
+              ),
+            ),
+          );
         }
       },
     );

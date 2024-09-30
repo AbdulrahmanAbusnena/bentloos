@@ -1,10 +1,10 @@
 import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:firebase_auth/firebase_auth.dart';
 import 'package:bentlos/Models/usermodel.dart';
-// mport 'package:firebase_core/firebase_core.dart';
+// import 'package:firebase_core/firebase_core.dart
 
 class AuthServices {
-  // for storing data in firestore
+  // for storing data in firestorejfg;444rrrrrr
   final FirebaseFirestore _firestore = FirebaseFirestore.instance;
   // for the authentication
   final FirebaseAuth _auth = FirebaseAuth.instance;
