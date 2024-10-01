@@ -52,7 +52,7 @@ class _Containerhomepage3State extends State<Containerhomepage3> {
                         height: 100,
                         width: 405,
                         decoration: BoxDecoration(
-                          color: Colors.white,
+                          color: const Color.fromRGBO(255, 255, 255, 10),
                           borderRadius: BorderRadius.circular(20),
                         ),
                         child: Column(
