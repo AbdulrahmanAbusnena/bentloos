@@ -16,63 +16,65 @@ class _Intro3State extends State<Intro3> {
   Widget build(BuildContext context) {
     return Scaffold(
       backgroundColor: Colors.white,
-      body: Column(
-        children: [
-          const SizedBox(
-            height: 310,
-          ),
-          Center(
-            child: Text('Join Bentlos',
-                style: GoogleFonts.mouseMemoirs(
-                  color: Colors.black,
-                  fontSize: 50,
-                  fontWeight: FontWeight.w700,
-                )),
-          ),
-          const SizedBox(
-            height: 90,
-          ),
-          ElevatedButton(
-              style: buttonTheme3,
-              onPressed: () {
-                Navigator.push(
-                    context,
-                    MaterialPageRoute(
-                      builder: (context) => const SignUp(),
-                    ));
-              },
-              child: Text(
-                'Sign Up',
-                style: GoogleFonts.montserrat(
-                  color: Colors.black,
-                  fontSize: 18,
-                ),
-              )),
-          const SizedBox(
-            height: 10,
-          ),
-          Text(
-            'Or',
-            style: GoogleFonts.montserrat(
-              color: Colors.black,
-              fontSize: 15,
-              fontWeight: FontWeight.w500,
+      body: SingleChildScrollView(
+        child: Column(
+          children: [
+            const SizedBox(
+              height: 310,
             ),
-          ),
-          TextButton(
-            onPressed: () => Navigator.push(
-                context,
-                MaterialPageRoute(
-                  builder: (context) => const LoginPage(),
+            Center(
+              child: Text('Join Bentlos',
+                  style: GoogleFonts.mouseMemoirs(
+                    color: Colors.black,
+                    fontSize: 50,
+                    fontWeight: FontWeight.w700,
+                  )),
+            ),
+            const SizedBox(
+              height: 90,
+            ),
+            ElevatedButton(
+                style: buttonTheme3,
+                onPressed: () {
+                  Navigator.push(
+                      context,
+                      MaterialPageRoute(
+                        builder: (context) => const SignUp(),
+                      ));
+                },
+                child: Text(
+                  'Sign Up',
+                  style: GoogleFonts.montserrat(
+                    color: Colors.black,
+                    fontSize: 18,
+                  ),
                 )),
-            child: Text('Login',
-                style: GoogleFonts.montserrat(
-                  color: Colors.blue,
-                  fontSize: 20,
-                  fontWeight: FontWeight.w700,
-                )),
-          ),
-        ],
+            const SizedBox(
+              height: 10,
+            ),
+            Text(
+              'Or',
+              style: GoogleFonts.montserrat(
+                color: Colors.black,
+                fontSize: 15,
+                fontWeight: FontWeight.w500,
+              ),
+            ),
+            TextButton(
+              onPressed: () => Navigator.push(
+                  context,
+                  MaterialPageRoute(
+                    builder: (context) => const LoginPage(),
+                  )),
+              child: Text('Login',
+                  style: GoogleFonts.montserrat(
+                    color: Colors.blue,
+                    fontSize: 20,
+                    fontWeight: FontWeight.w700,
+                  )),
+            ),
+          ],
+        ),
       ),
     );
   }

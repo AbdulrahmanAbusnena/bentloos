@@ -86,6 +86,12 @@ class _SignUpState extends State<SignUp> {
               icon: Icons.person_rounded,
               isPass: false,
               textInputType: TextInputType.name,
+              validator: (value) {
+                if (value == null || value.isEmpty) {
+                  return 'Please enter your Name.';
+                }
+                return null;
+              },
             ),
             Textfields(
               textEditingController: emailController,
@@ -93,14 +99,27 @@ class _SignUpState extends State<SignUp> {
               icon: Icons.email_rounded,
               isPass: false,
               textInputType: TextInputType.emailAddress,
+              validator: (value) {
+                if (value == null ||
+                    value.isEmpty ||
+                    !AuthServices().emailValidator(value)) {
+                  return 'Please enter a valid email address.';
+                }
+                return null;
+              },
             ),
             Textfields(
-              textEditingController: passwordController,
-              hintText: 'Enter your Password',
-              icon: Icons.lock_rounded,
-              isPass: true,
-              textInputType: TextInputType.none,
-            ),
+                textEditingController: passwordController,
+                hintText: 'Enter your Password',
+                icon: Icons.lock_rounded,
+                isPass: true,
+                textInputType: TextInputType.none,
+                validator: (value) {
+                  if (value == null || value.isEmpty) {
+                    return 'Please enter your Password.';
+                  }
+                  return null;
+                }),
             const SizedBox(
               height: 20,
             ),

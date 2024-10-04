@@ -1,3 +1,4 @@
+import 'package:bentlos/Components/container4.dart';
 import 'package:bentlos/Components/container_homepage.dart';
 import 'package:bentlos/Components/container_homepage2.dart';
 import 'package:bentlos/Components/containerhomepage3.dart';
@@ -16,7 +17,6 @@ class _HomepageState extends State<Homepage> {
   final GlobalKey<ScaffoldState> _scafoldKey = GlobalKey<ScaffoldState>();
   @override
   Widget build(BuildContext context) {
-    var screenSize = MediaQuery.of(context).size.width;
     return Scaffold(
       key: _scafoldKey,
       backgroundColor: const Color(0xffE7EFEC),
@@ -68,6 +68,21 @@ class _HomepageState extends State<Homepage> {
             height: 20,
           ),
           const Containerhomepage3(),
+          const SizedBox(
+            height: 20,
+          ),
+          const SingleChildScrollView(
+            scrollDirection: Axis.horizontal,
+            child: Row(
+              children: [
+                Container4(),
+                SizedBox(
+                  width: 20,
+                ),
+                Container4()
+              ],
+            ),
+          ),
         ],
       ),
     );

@@ -17,6 +17,7 @@ class Textfields extends StatelessWidget {
     this.isPass = false,
     required this.icon,
     required this.textInputType,
+    required String? Function(dynamic value) validator,
   });
 
   @override
