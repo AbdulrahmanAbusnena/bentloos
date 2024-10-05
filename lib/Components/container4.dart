@@ -20,7 +20,7 @@ class _Container4State extends State<Container4> {
       ),
       child: Column(
         children: [
-          SizedBox(
+          const SizedBox(
             height: 10,
           ),
           Center(
@@ -34,12 +34,12 @@ class _Container4State extends State<Container4> {
               ),
             ),
           ),
-          SizedBox(
+          const SizedBox(
             height: 10,
           ),
           Row(
             children: [
-              SizedBox(
+              const SizedBox(
                 width: 10,
               ),
               Text('Beverly Hill Pitch',

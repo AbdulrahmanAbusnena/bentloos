@@ -51,16 +51,11 @@ class _LoginPageState extends State<LoginPage> {
           password: passwordController.text,
         );
 
-        if (user != null) {
-          Navigator.pushReplacement(
-            context,
-            MaterialPageRoute(builder: (context) => const Homepage()),
-          );
-        } else {
-          throw AuthException(
-              message: "Login failed. Please check your credentials.");
-        }
-      } on AuthException catch (e) {
+        Navigator.pushReplacement(
+          context,
+          MaterialPageRoute(builder: (context) => const Homepage()),
+        );
+            } on AuthException catch (e) {
         setState(() {
           _errorMessage = e.message;
         });
