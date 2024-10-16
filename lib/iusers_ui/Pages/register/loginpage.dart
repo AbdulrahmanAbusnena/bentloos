@@ -3,7 +3,8 @@
 import 'package:bentlos/Components/textfield.dart';
 import 'package:bentlos/Components/buttons.dart';
 import 'package:bentlos/Components/snackbar.dart';
-import 'package:bentlos/Pages/register/signuppage.dart';
+import 'package:bentlos/iusers_ui/Pages/register/signuppage.dart';
+
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:bentlos/Services/authentication.dart';
@@ -55,7 +56,7 @@ class _LoginPageState extends State<LoginPage> {
           context,
           MaterialPageRoute(builder: (context) => const Homepage()),
         );
-            } on AuthException catch (e) {
+      } on AuthException catch (e) {
         setState(() {
           _errorMessage = e.message;
         });

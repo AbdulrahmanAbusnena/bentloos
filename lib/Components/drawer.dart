@@ -1,6 +1,7 @@
-import 'package:bentlos/Pages/homepage.dart';
-import 'package:bentlos/Pages/register/logoutpage.dart';
-import 'package:bentlos/Pages/walletpage.dart';
+import 'package:bentlos/iusers_ui/Pages/homepage.dart';
+import 'package:bentlos/iusers_ui/Pages/register/logoutpage.dart';
+import 'package:bentlos/iusers_ui/Pages/walletpage.dart';
+
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 
