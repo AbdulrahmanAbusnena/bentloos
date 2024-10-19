@@ -1,6 +1,6 @@
 import 'package:bentlos/Components/navbar.dart';
 import 'package:bentlos/firebase_options.dart';
-import 'package:bentlos/iusers_ui/Pages/intro_pages/registrationpage.dart';
+import 'package:bentlos/iusers_ui/pages/intro_pages/registrationpage.dart';
 import 'package:firebase_core/firebase_core.dart';
 import 'package:flutter/material.dart';
 import 'package:firebase_auth/firebase_auth.dart';

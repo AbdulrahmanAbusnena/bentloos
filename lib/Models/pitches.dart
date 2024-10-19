@@ -1,5 +1,5 @@
 class Pitches {
-  String uid;
+  String pid;
   String name;
   String description;
   String imagepath;
@@ -15,12 +15,12 @@ class Pitches {
     required this.location,
     required this.time,
     required this.price,
-    required this.uid,
+    required this.pid,
     required this.sizes,
   });
   factory Pitches.fromMap(Map<String, dynamic> data) {
     return Pitches(
-      uid: data['uid'],
+      pid: data['pid'],
       name: data['name'],
       description: data['description'],
       imagepath: data['imagepath'],
@@ -32,7 +32,7 @@ class Pitches {
   }
   Map<String, dynamic> toMap() {
     return {
-      'uid': uid,
+      'pid': pid,
       'description': description,
       'name': name,
       'price': price,

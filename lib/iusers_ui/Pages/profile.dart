@@ -1,5 +1,5 @@
 import 'package:bentlos/Components/text_control.dart';
-import 'package:bentlos/iusers_ui/Pages/register/loginpage.dart';
+import 'package:bentlos/iusers_ui/pages/register/loginpage.dart';
 
 import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:firebase_auth/firebase_auth.dart';

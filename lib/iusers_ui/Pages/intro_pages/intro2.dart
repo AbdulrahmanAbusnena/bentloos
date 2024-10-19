@@ -1,5 +1,5 @@
 import 'package:bentlos/Components/buttons.dart';
-import 'package:bentlos/iusers_ui/Pages/intro_pages/intro3.dart';
+import 'package:bentlos/iusers_ui/pages/intro_pages/intro3.dart';
 
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
