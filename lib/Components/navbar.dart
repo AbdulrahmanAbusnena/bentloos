@@ -1,7 +1,7 @@
-import 'package:bentlos/Pages/homepage.dart';
-import 'package:bentlos/Pages/profile.dart';
-import 'package:bentlos/Pages/searchpage.dart';
-import 'package:bentlos/Pages/setting.dart';
+import 'package:bentlos/iusers_ui/pages/homepage.dart';
+import 'package:bentlos/iusers_ui/pages/profile.dart';
+import 'package:bentlos/iusers_ui/pages/searchpage.dart';
+import 'package:bentlos/iusers_ui/pages/setting.dart';
 import 'package:flutter/material.dart';
 
 class NavBar extends StatefulWidget {

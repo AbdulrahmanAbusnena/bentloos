@@ -1,6 +1,7 @@
 import 'package:bentlos/Components/buttons.dart';
-import 'package:bentlos/Pages/register/loginpage.dart';
-import 'package:bentlos/Pages/register/signuppage.dart';
+import 'package:bentlos/iusers_ui/pages/register/loginpage.dart';
+import 'package:bentlos/iusers_ui/pages/register/signuppage.dart';
+
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 
@@ -43,7 +44,7 @@ class _Intro3State extends State<Intro3> {
                       ));
                 },
                 child: Text(
-                  'Sign Up',
+                  'Renter',
                   style: GoogleFonts.montserrat(
                     color: Colors.black,
                     fontSize: 18,
@@ -66,7 +67,7 @@ class _Intro3State extends State<Intro3> {
                   MaterialPageRoute(
                     builder: (context) => const LoginPage(),
                   )),
-              child: Text('Login',
+              child: Text('Owner',
                   style: GoogleFonts.montserrat(
                     color: Colors.blue,
                     fontSize: 20,
